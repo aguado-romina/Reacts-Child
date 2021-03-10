@@ -20,7 +20,9 @@
   "homepage": "https://github.com/aguado-romina/Reacts-Child#readme",
   "dependencies": {
     "eslint": "^7.21.0",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "react-router-dom": "^5.2.0",
+    "tailwindcss": "^2.0.3"
   },
   "devDependencies": {
     "eslint-plugin-prettier": "^3.3.1",
