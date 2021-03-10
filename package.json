@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/aguado-romina/Reacts-Child/issues"
   },
-  "homepage": "https://github.com/aguado-romina/Reacts-Child#readme"
+  "homepage": "https://github.com/aguado-romina/Reacts-Child#readme",
+  "dependencies": {
+    "eslint": "^7.21.0"
+  }
 }
