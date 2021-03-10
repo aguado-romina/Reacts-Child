@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/aguado-romina/Reacts-Child#readme",
   "dependencies": {
-    "eslint": "^7.21.0"
+    "eslint": "^7.21.0",
+    "prettier": "^2.2.1"
   },
   "devDependencies": {
     "eslint-plugin-react": "^7.22.0"
