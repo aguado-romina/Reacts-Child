@@ -4,7 +4,7 @@
 
 ![](client/public/screen-by-screen/login_signup.png)
 
-![](client/public/screen-by-screen/PetInfo.png)
+<!-- ![](client/public/screen-by-screen/PetInfo.png) -->
 
 ## License
 
