@@ -36,6 +36,7 @@
     "no-use-before-define": "error",
     "no-redeclare": "error",
     "camelcase": "error",
+    "css.lint.unknownAtRules": "ignore",
     "brace-style": "error",
     "indent": ["error", 2],
     "quotes": ["error", "double"],

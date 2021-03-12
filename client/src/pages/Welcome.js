@@ -1,10 +1,9 @@
-// the landing page 
 import React from "react";
 
 function Welcome () {
     return (
-        <div>
-            <h1> Hello World </h1>
+        <div className="App"> 
+       <h1>Hello You Gorgeous Auth</h1>
         </div>
     )
 }
