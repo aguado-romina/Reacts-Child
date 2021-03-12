@@ -17,3 +17,7 @@
 © 2021 Mariam Ali
 <br>
 © 2021 Romina Aguado
+
+## Credits 
+
+* React Firebase Authentication: [Tutorial](https://www.youtube.com/watch?v=zq0TuNqV0Ew)
