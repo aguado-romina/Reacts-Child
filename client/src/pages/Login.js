@@ -2,9 +2,9 @@
 import React, { useRef } from "react";
 import { Form, Button, Card } from "react-bootstrap";
 
-require('react-dom');
-window.React2 = require('react');
-console.log(window.React1 === window.React2);
+// require('react-dom');
+// window.React2 = require('react');
+// console.log(window.React1 === window.React2);
 
 export default function Login() {
    
