@@ -5,12 +5,21 @@ const Schema = mongoose.Schema;
 const petSchema = new Schema ({
     petInfo: [
        {
-           name: {
+           ownerName: {
+               type: String,
+           },
+           puppyName: {
+               type: String,
+           },
+           puppyImage: {
                type: String,
            },
            breed: {
                type: String, 
            },
+           age: {
+               type: String,
+           }
            
        }
     ]
