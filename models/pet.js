@@ -7,18 +7,23 @@ const petSchema = new Schema ({
        {
            ownerName: {
                type: String,
+               required: true,
            },
            puppyName: {
                type: String,
+               required: true,
            },
            puppyImage: {
                type: String,
+               required: true,
            },
            breed: {
                type: String, 
+               required: true,
            },
            age: {
                type: String,
+               required: true,
            }
            
        }
