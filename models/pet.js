@@ -10,7 +10,8 @@ const petSchema = new Schema ({
            },
            breed: {
                type: String, 
-           }
+           },
+           
        }
     ]
 });
