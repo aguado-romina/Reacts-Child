@@ -28,6 +28,7 @@ const petSchema = new Schema ({
            
        }
     ]
+
 });
 
 const Puppy = mongoose.model("Puppy", petSchema);
