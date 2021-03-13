@@ -1,10 +1,13 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Welcome from "./pages/Welcome";
+// import Welcome from "./pages/Welcome";
 import firebase from "firebase";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import { Component } from "react";
+import Signup from "./components/SignUpForm/index"
+import SignupForm from "./components/SignUpForm/index";
+import "./index.css";
 
 firebase.initializeApp({
   apiKey: "AIzaSyB2tdcU5QNdKXSdgZIoNuf6ejdNE5Dkfs8",
@@ -35,7 +38,7 @@ class App extends Component {
     return (
       <div className="App"> 
        <Router>
-      <Welcome exact path="/" component={Welcome}/>
+      <Signup exact path="/" component={SignupForm}/>
     </Router>
       {this.state.isSignedIn ? 
       <span>

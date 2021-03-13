@@ -1,7 +1,27 @@
-// let mongoose = require("mongoose");
-// let db = require("../models");
 
-// mongoose.connect("mongodb://localhost/pet", {
-//   useNewUrlParser: true,
-//   useFindAndModify: false,
-// });
+const mongoose = require("mongoose");
+const db = require("../models");
+
+// This file empties the Books collection and inserts the books below
+
+mongoose.connect(
+  process.env.MONGODB_URI ||
+  "mongodb://localhost/pet"
+);
+
+const petSeed = [
+  {
+  }
+];
+
+db.Puppy
+  .remove({})
+  .then(() => db.Puppy.collection.insertMany(petSeed))
+  .then(data => {
+    console.log(data.result.n + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
