@@ -7,30 +7,33 @@
 import React from "react";
 import "./style.css";
 
-function FriendCard(props) {
+function Profile() {
   return (
     <div className="card">
       <div className="img-container">
-        <img alt={props.name} src={props.image} />
+        {/* <img alt={props.name} src={props.image} /> */}
       </div>
       <div className="content">
         <ul>
           <li>
-            <strong>Name:</strong> {props.name}
+            <strong>Puppy Parent:</strong> 
           </li>
           <li>
-            <strong>Occupation:</strong> {props.occupation}
+            <strong>Puppy Name:</strong> 
           </li>
           <li>
-            <strong>Location:</strong> {props.location}
+            <strong>Age:</strong> 
+          </li>
+          <li>
+            <strong>Bio:</strong> 
           </li>
         </ul>
       </div>
-      <span onClick={() => props.removeFriend(props.id)} className="remove">
+      {/* <span onClick={() => props.removeFriend(props.id)} className="remove">
         𝘅
-      </span>
+      </span> */}
     </div>
   );
 }
 
-export default FriendCard;
+export default Profile;
