@@ -1,7 +1,7 @@
 //signup form 
 //what information do we want stored in our database
-import React from "react";
-import Signup from "../components/SignUpForm/index";
+import React, {Component} from "react";
+import SignupForm from "../components/SignUpForm/index";
 import API from "../utils/API";
 
 class Signup extends Component{
@@ -21,7 +21,9 @@ signUp = () => {
     // const puppyImage = this.props.puppyImage;
 }
 render() {
-
+    return (
+    <SignupForm></SignupForm>
+    )
 }
 }
 export default Signup;
