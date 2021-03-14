@@ -10,7 +10,7 @@ function CreateProfile() {
     const breed = useRef();
     const age = useRef();
     const bio = useRef();
-    const [state, dispatch] = useStoreContext();
+    const [state, dispatch] = useStoreContext('');
 
     const handleSubmit = e => {
         e.preventDefault();
