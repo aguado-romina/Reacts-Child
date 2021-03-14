@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "puppy_parent": "fred",
+        "puppy_name": "frenchy",
+        "breed": "bulldog",
+        "image": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/11234019/Bulldog-standing-in-the-grass.jpg",
+        "bio":
+          "Welcome to your first post! To create posts create a title and body. Don't forget to include your screen name!",
+        "age": "10 months"
+      },
+      {
+        "id": 2,
+        "puppy_parent": "Sandra",
+        "puppy_name": "Squidward",
+        "breed": "Golden retriever",
+        "image": "https://www.petmd.com/sites/default/files/styles/breeds_image/public/2020-11/picture-of-golden-retriever-dog_0.jpg?itok=dLOdDNTI",
+        "bio":
+          "Welcome to your first post! To create posts create a title and body. Don't forget to include your screen name!",
+        "age": "10 months"
+      },
+      {
+        "id": 3,
+        "puppy_parent": "Muna",
+        "puppy_name": "Cherry",
+        "breed": "poodle",
+        "image": "https://barkwiki.com/images/standard-poodle-1000x500.jpg",
+        "bio":
+          "Welcome to your first post! To create posts create a title and body. Don't forget to include your screen name!",
+        "age": "3 years"
+      }
+    ]

@@ -1,9 +1,10 @@
 import React from "react";
+import "./style.css";
 
 function Welcome () {
     return (
         <div className="App"> 
-       <h1>Hello You Gorgeous Auth</h1>
+       <h1> Hello You Gorgeous Auth</h1>
         </div>
     )
 }

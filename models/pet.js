@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const petSchema = new Schema ({
   petInfo: [
     {
-      ownerName: {
+      puppyParent: {
         type: String,
       },
       puppyName: {
