@@ -1,49 +1,51 @@
 //login page with the email or username 
-import React, { useRef } from "react";
-import { Form, Button, Card } from "react-bootstrap";
+import React, { useCallback, useContext } from "react";
+import { withRouter, Redirect } from "react-router";
+import AuthApp from "../firebase";
+import { AuthContext } from "../AuthContext";
 
-// require('react-dom');
-// window.React2 = require('react');
-// console.log(window.React1 === window.React2);
+const Login = ({ history }) => {
+  const handleLogin = useCallback(
+    async event => {
+      event.preventDefault();
+      const { email, password } = event.target.elements;
+      try {
+        await AuthApp
+          .auth()
+          .signInWithEmailAndPassword(email.value, password.value);
+          console.log(email);
+        history.push("/");
+      } catch (error) {
+        alert(error);
+      }
+    },
+    [history]
+  );
 
-export default function Login() {
-   
-    const emailRef = useRef();
-    const passwordRef = useRef();
-    const passwordConfirmRef = useRef();
+  const { currentUser } = useContext(AuthContext);
 
-    return (
-        <>
-            <card>
-                <Card.Body>
-                    <h2 className="text -center mb-4">
-                        Sign Up
-                    </h2>
-                    <Form>
-                    <Form.Group id="email">
-                        <Form.Label>Email</Form.Label>
-                        <Form.Control type="email" ref={emailRef} required />
-                    </Form.Group>
+  if (currentUser) {
+    console.log(currentUser);
+    return <Redirect to="/" />;
+  }
 
-                    <Form.Group id="password">
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control type="password" ref={passwordRef} required />
-                    </Form.Group>
+  return (
+    <div>
+      <h1>Log in</h1>
+      <form onSubmit={handleLogin}>
+        <label>
+          Email
+          <input name="email" type="email" placeholder="Email" />
+        </label>
+        <label>
+          Password
+          <input name="password" type="password" placeholder="Password" />
+        </label>
+        <button type="submit">Log in</button>
+      </form>
+    </div>
+  );
+};
 
-                    <Form.Group id="password-confirm">
-                        <Form.Label>Password Confirmation</Form.Label>
-                        <Form.Control type="password" ref={passwordConfirmRef} required />
-                    </Form.Group>
-                    <Button className="w-100" type="submit">Sign Up</Button>
-                    </Form>
-                </Card.Body>
-            </card>
-            <div className="w-100 text-center mt-2">
-                Already have an account? Log In
-            </div>
-            
-        </>
-    )
-}
-
-         
+export default withRouter(Login);
+ 

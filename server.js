@@ -1,6 +1,6 @@
 const express = require("express");
 const path = require("path");
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 const app = express();
 const mongoose = require("mongoose");
 require("dotenv").config();
@@ -23,6 +23,7 @@ app.get("*", (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
+  console.log(process.env.REACT_APP_FIREBASE_API_KEY);
 });
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/pet", {
