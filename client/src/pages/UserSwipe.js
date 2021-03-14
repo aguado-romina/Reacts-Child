@@ -1,1 +1,0 @@
-// view other users and they can like or dislike based on pictures

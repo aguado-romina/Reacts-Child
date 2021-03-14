@@ -11,11 +11,35 @@ mongoose.connect(
 
 const petSeed = [
   {
+    puppyParent: "Hello World",
+    puppyName: "admin1",
+    puppyImage:"an image will appear magically",
+      bio: "A little about me",
+      breed: "A breed name",
+      age: "A number that is counted",
+    date: new Date(Date.now())
+  },
+  {
+    puppyParent: "Hi World",
+    puppyName: "admin2",
+    puppyImage:"an image will appear magically pt 2",
+      bio: "A lot about me",
+      breed: "A breed name2",
+      age: "A number that is counted+2",
+    date: new Date(Date.now())
+  },
+  {
+    puppyParent: "Yello World",
+    puppyName: "admin3",
+    puppyImage:"an image will appear magically pt 3",
+      bio: "A smidge about me",
+      breed: "A breed name3",
+      age: "A number that is counted+3",
+    date: new Date(Date.now())
   }
 ];
 
-db.Puppy
-  .remove({})
+db.Puppy.remove({})
   .then(() => db.Puppy.collection.insertMany(petSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");

@@ -1,3 +1,3 @@
 module.exports = {
-  Puppy: require("./pet")
+  Puppy: require("./pet") //might error?
 };
