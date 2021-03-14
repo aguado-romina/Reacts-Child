@@ -10,6 +10,7 @@ import Profile from "./pages/Profile";
 import { AuthProvider } from "./AuthContext";
 import PrivateRoute from "./PrivateRoute";
 import Navbar from "./components/Navbar/index";
+// import CreateProfile from "./components/CreateProfile/index"
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
             <PrivateRoute exact path="/Profile" component={Profile} />
             <Route exact path="/Matches" component={Matches} />
             <Route exact path="/UserSwipe" component={UserSwipe} />
-            <Route exact path="/Welcome" component={Welcome} />
+            {/* <Route exact path="/Welcome" component={Welcome} /> */}
           </div>
         </Router>
       </AuthProvider>

@@ -86,6 +86,7 @@ const StoreProvider = ({ value = [], ...props }) => {
       puppyName: "",
       breed: "",
       age: "",
+      bio: "",
     },
     matches: [],
     loading: false
