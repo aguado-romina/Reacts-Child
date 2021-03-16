@@ -7,6 +7,7 @@ import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import { Component } from "react";
 import Signup from "./components/SignUpForm/index"
 import SignupForm from "./components/SignUpForm/index";
+import Welcome from "./pages/Welcome"
 import "./index.css";
 
 firebase.initializeApp({
@@ -38,7 +39,9 @@ class App extends Component {
     return (
       <div className="App"> 
        <Router>
-      <Signup exact path="/" component={SignupForm}/>
+         <Route path="/" component={Welcome} />
+      <Route exact path="/signup" component={SignupForm}/>
+      {/* <Route exact path="/login" component={} /> */}
     </Router>
       {this.state.isSignedIn ? 
       <span>
