@@ -44,7 +44,7 @@ function MatchesList() {
         <List>
           {state.profiles.map(profile => (
             <ListItem key={profile._id}>
-              <Link to={"/posts/:id" + profile._id}>
+              <Link to={"/profiles/" + profile._id}>
                 <strong>
                   {profile.puppyParent} with {profile.puppyName}
                 </strong>

@@ -10,7 +10,9 @@ const Detail = props => {
   const [state, dispatch] = useStoreContext();
 
   useEffect(() => {
-    API.getProfile(props.match.params.id)
+    let id = props.match.params.id;
+    console.log(id);
+    API.getProfile(id)
       .then(res => dispatch({ type: SET_CURRENT_PROFILE, profile: res.data }))
       .catch(err => console.log(err));
   }, []);
@@ -45,7 +47,7 @@ const Detail = props => {
           <Col size="md-10 md-offset-1">
             <article>
               <h1>Content:</h1>
-              <p>{state.currentProfile.body}</p>
+              <p>{state.currentProfile.bio}</p>
             </article>
           </Col>
           {state.matches.indexOf(state.currentProfile) !== -1 ? (

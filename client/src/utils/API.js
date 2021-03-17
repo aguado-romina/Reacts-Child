@@ -7,7 +7,7 @@ export default {
   },
   
   getProfile: function(id) {
-    return axios.get("/api/profiles/" + id);
+    return axios.get(`/api/profiles/${id}`);
   },
   
   deleteProfiles: function(id) {
