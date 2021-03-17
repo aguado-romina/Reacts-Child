@@ -8,6 +8,7 @@ import { Component } from "react";
 import Signup from "./components/SignUpForm/index";
 import SignupForm from "./components/SignUpForm/index";
 import "./index.css";
+// import Uploadimg from "./components/UploadImages/Allcompailed";
 
 firebase.initializeApp({
   apiKey: "AIzaSyB2tdcU5QNdKXSdgZIoNuf6ejdNE5Dkfs8",
