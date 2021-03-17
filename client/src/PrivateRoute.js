@@ -13,7 +13,7 @@ const PrivateRoute = ({ component: RouteComponent, ...rest }) => {
         ) : (
           <>
           </>
-          // <Redirect to={"/Login"} (took out the redirect)/>
+          // <Redirect to={"/Login"} /> (took out the redirect)
         )
       }
     />

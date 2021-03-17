@@ -10,12 +10,12 @@ function CreateProfile() {
     const breed = useRef();
     const age = useRef();
     const bio = useRef();
-    const [state, dispatch] = useStoreContext('');
+    const [state, dispatch] = useStoreContext();
 
     const handleSubmit = e => {
         e.preventDefault();
         dispatch({ type: LOADING });
-        API.savePost({
+        API.saveProfiles({
           puppyParent: puppyParent.current.value,
           puppyName: puppyName.current.value,
         //   puppyImage: puppyImage.current.value,

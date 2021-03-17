@@ -19,13 +19,13 @@ function App() {
       <AuthProvider>
         <Router>
           <div>
-            <Route exact path="/" component={Welcome} />
+            <Route path="/" component={Welcome} />
             <Route exact path="/Login" component={Login} />
             <Route exact path="/SignUp" component={SignUp} />
             <PrivateRoute exact path="/Profile" component={Profile} />
             <Route exact path="/Matches" component={Matches} />
             <Route exact path="/UserSwipe" component={UserSwipe} />
-            {/* <Route exact path="/Welcome" component={Welcome} /> */}
+            <Route exact path="/Welcome" component={Welcome} />
           </div>
         </Router>
       </AuthProvider>
