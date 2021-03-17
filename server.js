@@ -5,13 +5,10 @@ const app = express();
 const mongoose = require("mongoose");
 require("dotenv").config();
 
-const express = require("express");
 const cloudinary = require("cloudinary");
 const formData = require("express-form-data");
 const cors = require("cors");
 const { CLIENT_ORIGIN } = require("./config");
-
-const app = express();
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
