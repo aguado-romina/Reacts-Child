@@ -14,7 +14,7 @@ export default {
     return axios.delete("/api/profiles/" + id);
   },
 
-  saveProfiles: function(postData) {
+  saveProfile: function(postData) {
     return axios.post("/api/profiles", postData);
   }
 };

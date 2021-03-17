@@ -14,28 +14,25 @@ const petSeed = [
     puppyParent: "Hello World",
     puppyName: "admin1",
     puppyImage:"an image will appear magically",
-      bio: "A little about me",
-      breed: "A breed name",
-      age: "A number that is counted",
-    date: new Date(Date.now())
+    bio: "A little about me",
+    breed: "A breed name",
+    age: "A number that is counted"
   },
   {
     puppyParent: "Hi World",
     puppyName: "admin2",
     puppyImage:"an image will appear magically pt 2",
-      bio: "A lot about me",
-      breed: "A breed name2",
-      age: "A number that is counted+2",
-    date: new Date(Date.now())
+    bio: "A lot about me",
+    breed: "A breed name2",
+    age: "A number that is counted+2"
   },
   {
     puppyParent: "Yello World",
     puppyName: "admin3",
     puppyImage:"an image will appear magically pt 3",
-      bio: "A smidge about me",
-      breed: "A breed name3",
-      age: "A number that is counted+3",
-    date: new Date(Date.now())
+    bio: "A smidge about me",
+    breed: "A breed name3",
+    age: "A number that is counted+3"
   }
 ];
 

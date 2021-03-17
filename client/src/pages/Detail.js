@@ -48,7 +48,7 @@ const Detail = props => {
               <p>{state.currentProfile.body}</p>
             </article>
           </Col>
-          {state.favorites.indexOf(state.currentProfile) !== -1 ? (
+          {state.matches.indexOf(state.currentProfile) !== -1 ? (
             <button className="btn btn-danger" onClick={removeFavorite}>
                 Remove from Favorites!
             </button>

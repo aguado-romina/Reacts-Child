@@ -3,7 +3,7 @@ import { ListItem, List } from "../List";
 import DeleteBtn from "../DeleteBtn";
 import { Link } from "react-router-dom";
 import { useStoreContext } from "../../utils/GlobalState";
-import { REMOVE_PROFILE, UPDATE_PROFILE, LOADING } from "../../utils/actions";
+import { REMOVE_PROFILE, UPDATE_PROFILES, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
 
 function MatchesList() {
@@ -25,7 +25,7 @@ function MatchesList() {
     API.getProfiles()
       .then(results => {
         dispatch({
-          type: UPDATE_PROFILE,
+          type: UPDATE_PROFILES,
           profiles: results.data
         });
       })
@@ -44,7 +44,7 @@ function MatchesList() {
         <List>
           {state.profiles.map(profile => (
             <ListItem key={profile._id}>
-              <Link to={"/profiles/" + profile._id}>
+              <Link to={"/posts/:id" + profile._id}>
                 <strong>
                   {profile.puppyParent} with {profile.puppyName}
                 </strong>

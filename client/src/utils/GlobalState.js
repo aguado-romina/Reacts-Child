@@ -2,13 +2,15 @@ import React, { createContext, useReducer, useContext } from "react";
 import {
   SET_CURRENT_PROFILE,
   REMOVE_PROFILE,
-  UPDATE_PROFILE,
+  UPDATE_PROFILES,
   ADD_PROFILE,
   ADD_MATCH,
   UPDATE_MATCHES,
   REMOVE_MATCH,
-  LOADING 
+  LOADING
 } from "./actions";
+
+
 
 const StoreContext = createContext();
 const { Provider } = StoreContext;
@@ -22,7 +24,7 @@ const reducer = (state, action) => {
       loading: false
     };
 
-  case UPDATE_PROFILE:
+  case UPDATE_PROFILES:
     return {
       ...state,
       profiles: [...action.profiles],
