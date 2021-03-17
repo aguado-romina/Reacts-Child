@@ -1,9 +1,12 @@
-import React, { useRef } from "react";
+import React, { useRef, useContext } from "react";
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_PROFILE, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
+import { AuthContext } from "../../AuthContext";
+
 
 function CreateProfileForm() {
+    const { currentUser } = useContext(AuthContext);
     const ParentRef = useRef();
     const NameRef = useRef();
     const ImageRef = useRef();
@@ -21,7 +24,8 @@ function CreateProfileForm() {
         puppyImage: ImageRef.current.value,
         bio: bioRef.current.value,
         breed: breedRef.current.value,
-        age: ageRef.current.value
+        age: ageRef.current.value,
+        currentUser // check firebase res object for the specific UID
         
     })
       .then(result => {
