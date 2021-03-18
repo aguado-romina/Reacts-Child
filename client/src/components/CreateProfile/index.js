@@ -3,16 +3,15 @@ import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_PROFILE, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
 import SignUpImg from "../UploadImages/SignUpImg/index";
-import {AuthContext} from "../../AuthContext";
+import { AuthContext } from "../../AuthContext";
 
-function CreateProfileForm() {
+function CreateProfile() {
+  const { currentUser } = useContext(AuthContext);
   const ParentRef = useRef();
   const NameRef = useRef();
-  const ImageRef = useRef();
   const breedRef = useRef();
   const ageRef = useRef();
-  const bioRef = useRef();
-  const currentUser = useContext(AuthContext);
+  const bioRef = useRef()
   const [state, dispatch] = useStoreContext();
 
   const handleSubmit = (e) => {
@@ -21,11 +20,10 @@ function CreateProfileForm() {
     API.saveProfile({
       puppyParent: ParentRef.current.value,
       puppyName: NameRef.current.value,
-      puppyImage: ImageRef.current.value,
       bio: bioRef.current.value,
       breed: breedRef.current.value,
       age: ageRef.current.value,
-      currentUser
+      currentUser // uses uid. 
       
     })
       .then((result) => {
@@ -38,7 +36,6 @@ function CreateProfileForm() {
 
     ParentRef.current.value = "";
     NameRef.current.value = "";
-    ImageRef.current.value = "";
     bioRef.current.value = "";
     breedRef.current.value = "";
     ageRef.current.value = "";
@@ -172,4 +169,4 @@ function CreateProfileForm() {
   );
 }
 
-export default CreateProfileForm;
+export default CreateProfile;

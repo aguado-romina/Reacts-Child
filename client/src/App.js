@@ -6,28 +6,28 @@ import Login from "./pages/Login";
 import SignUp from "./pages/Signup";
 // import UserSwipe from "./pages/UserSwipe";
 // import Matches from "./pages/UserSwipe";
-import Profile from "./pages/Profile";
-import { AuthProvider } from "./AuthContext";
-import PrivateRoute from "./PrivateRoute";
+// import Profile from "./pages/Profile";
+// import { AuthProvider } from "./AuthContext";
+// import PrivateRoute from "./PrivateRoute";
 
 // import CreateProfile from "./components/CreateProfile/index"
 
 function App() {
   return (
     <>
-      <AuthProvider>
+      {/* <AuthProvider> */}
         <Router>
           <div>
-            <Route path="/" component={Welcome} />
+            {/* <Route path="/" component={Welcome} /> */}
             <Route exact path="/Login" component={Login} />
             <Route exact path="/SignUp" component={SignUp} />
-            <PrivateRoute exact path="/Profile" component={Profile} />
+            {/* <PrivateRoute exact path="/Profile" component={Profile} /> */}
             {/* <Route exact path="/Matches" component={Matches} />
             <Route exact path="/UserSwipe" component={UserSwipe} /> */}
             <Route exact path="/Welcome" component={Welcome} />
           </div>
         </Router>
-      </AuthProvider>
+      {/* </AuthProvider> */}
     </>
 // import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // import Home from "./pages/Home";
