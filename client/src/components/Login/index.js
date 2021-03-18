@@ -1,6 +1,32 @@
-import React from "react";
+import React, { useCallback, useContext } from "react";
+import { withRouter, Redirect } from "react-router";
+import AuthApp from "../../firebase";
+import { AuthContext } from "../../AuthContext";
+import {Link} from "react-router-dom";
 
-function LoginPage() {
+const Login = ({ history }) => {
+  const handleLogin = useCallback(
+    async (event) => {
+      event.preventDefault();
+      const { email, password } = event.target.elements;
+      try {
+        await AuthApp.auth().signInWithEmailAndPassword(
+          email.value,
+          password.value
+        );
+        console.log(email);
+        history.push("/");
+      } catch (error) {
+        alert(error);
+      }
+    },
+    [history]
+  );
+  const { currentUser } = useContext(AuthContext);
+  if (currentUser) {
+    console.log(currentUser);
+    return <Redirect to="/Profile" />;
+  }
   return (
     <div class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div class="max-w-md w-full space-y-8">
@@ -10,15 +36,14 @@ function LoginPage() {
           </h2>
           <p class="mt-2 text-center text-sm text-gray-600">
             Or
-            <a
-              href="#"
-              class="font-medium text-indigo-600 hover:text-indigo-500"
-            >
-              Sign Up
-            </a>
+            <Link
+              to="/signup"
+              className={
+                window.location.pathname === "/login" || window.location.pathname === "/signup"}
+            >Sign Up</Link>
           </p>
         </div>
-        <form class="mt-8 space-y-6" action="#" method="POST">
+        <form OnSubmit={handleLogin} class="mt-8 space-y-6" action="#" method="POST">
           <input type="hidden" name="remember" value="true" />
           <div class="rounded-md shadow-sm -space-y-px">
             <div>
@@ -101,6 +126,6 @@ function LoginPage() {
       </div>
     </div>
   );
-}
+};
 
-export default LoginPage;
+export default withRouter(Login);

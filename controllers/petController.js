@@ -17,7 +17,7 @@ module.exports = {
       .catch((err) => res.status(422).json(err));
   },
   update: function (req, res) {
-    db.Puppy.findOneAndUpdate({ _id: req.params.id }, req.body)
+    db.Puppy.findByIdAndUpdate({_id: req.params.id }, req.body)
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },

@@ -1,5 +1,44 @@
-import React from "react";
-function SignupForm() {
+import React, { useRef } from "react";
+import { useStoreContext } from "../../utils/GlobalState";
+import { ADD_PROFILE, LOADING } from "../../utils/actions";
+import API from "../../utils/API";
+import SignUpImg from "../UploadImages/SignUpImg/index";
+
+function CreateProfile() {
+  const ParentRef = useRef();
+  const NameRef = useRef();
+  const breedRef = useRef();
+  const ageRef = useRef();
+  const bioRef = useRef();
+  const [state, dispatch] = useStoreContext();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch({ type: LOADING });
+    API.saveProfile({
+      puppyParent: ParentRef.current.value,
+      puppyName: NameRef.current.value,
+    
+      bio: bioRef.current.value,
+      breed: breedRef.current.value,
+      age: ageRef.current.value,
+    })
+      .then((result) => {
+        dispatch({
+          type: ADD_PROFILE,
+          profile: result.data,
+        });
+      })
+      .catch((err) => console.log(err));
+
+    ParentRef.current.value = "";
+    NameRef.current.value = "";
+ 
+    bioRef.current.value = "";
+    breedRef.current.value = "";
+    ageRef.current.value = "";
+  };
+
   return (
     <div>
       <div class="hidden sm:block" aria-hidden="true">
@@ -24,6 +63,7 @@ function SignupForm() {
               <div class="shadow overflow-hidden sm:rounded-md">
                 <div class="px-4 py-5 bg-white sm:p-6">
                   <div class="grid grid-cols-6 gap-6">
+                    <SignUpImg></SignUpImg>
                     <div class="col-span-6 sm:col-span-3">
                       <label
                         for="puppy_parent"
@@ -32,6 +72,8 @@ function SignupForm() {
                         Puppy Parent
                       </label>
                       <input
+                        required
+                        ref={ParentRef}
                         type="text"
                         name="puppy_parent"
                         id="puppy_parent"
@@ -47,10 +89,28 @@ function SignupForm() {
                         Puppy name
                       </label>
                       <input
+                        required
+                        ref={NameRef}
                         type="text"
                         name="puppy_name"
                         id="puppy_name"
                         autocomplete="family-name"
+                        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                      />
+                    </div>
+                    <div class="col-span-6">
+                      <label
+                        for="puppy_bio"
+                        class="block text-sm font-medium text-gray-700"
+                      >
+                        Bio
+                      </label>
+                      <input
+                        ref={bioRef}
+                        type="text"
+                        name="puppy_bio"
+                        id="puppy_bio"
+                        autocomplete="puppyBio"
                         class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                       />
                     </div>
@@ -62,6 +122,7 @@ function SignupForm() {
                         Breed
                       </label>
                       <input
+                        ref={breedRef}
                         type="text"
                         name="puppy_breed"
                         id="puppy_breed"
@@ -77,25 +138,11 @@ function SignupForm() {
                         Age
                       </label>
                       <input
+                        ref={ageRef}
                         type="text"
                         name="puppy_age"
                         id="puppy_age"
                         autocomplete="age"
-                        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                      />
-                    </div>
-                    <div class="col-span-6">
-                      <label
-                        for="puppy_bio"
-                        class="block text-sm font-medium text-gray-700"
-                      >
-                        Bio
-                      </label>
-                      <input
-                        type="text"
-                        name="puppy_bio"
-                        id="puppy_bio"
-                        autocomplete="puppyBio"
                         class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                       />
                     </div>
@@ -105,8 +152,10 @@ function SignupForm() {
                   <button
                     type="submit"
                     class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    onClick={handleSubmit}
+                    disabled={state.loading}
                   >
-                    Save
+                    Create Profile
                   </button>
                 </div>
               </div>
@@ -117,4 +166,5 @@ function SignupForm() {
     </div>
   );
 }
-export default SignupForm;
+
+export default CreateProfile;
