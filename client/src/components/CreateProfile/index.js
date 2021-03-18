@@ -7,7 +7,6 @@ import SignUpImg from "../UploadImages/SignUpImg/index";
 function CreateProfile() {
   const ParentRef = useRef();
   const NameRef = useRef();
- 
   const breedRef = useRef();
   const ageRef = useRef();
   const bioRef = useRef();
