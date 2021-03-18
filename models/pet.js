@@ -15,10 +15,6 @@ const petSchema = new Schema({
     type: String,
     required: true,
   },
-  puppyImage: {
-    type: String,
-    required: true,
-  },
   bio: {
     type: String,
     required: true,

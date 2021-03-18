@@ -4,10 +4,10 @@ import { ADD_PROFILE, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
 import SignUpImg from "../UploadImages/SignUpImg/index";
 
-function CreateProfileForm() {
+function CreateProfile() {
   const ParentRef = useRef();
   const NameRef = useRef();
-  const ImageRef = useRef();
+ 
   const breedRef = useRef();
   const ageRef = useRef();
   const bioRef = useRef();
@@ -19,7 +19,7 @@ function CreateProfileForm() {
     API.saveProfile({
       puppyParent: ParentRef.current.value,
       puppyName: NameRef.current.value,
-      puppyImage: ImageRef.current.value,
+    
       bio: bioRef.current.value,
       breed: breedRef.current.value,
       age: ageRef.current.value,
@@ -34,7 +34,7 @@ function CreateProfileForm() {
 
     ParentRef.current.value = "";
     NameRef.current.value = "";
-    ImageRef.current.value = "";
+ 
     bioRef.current.value = "";
     breedRef.current.value = "";
     ageRef.current.value = "";
@@ -168,4 +168,4 @@ function CreateProfileForm() {
   );
 }
 
-export default CreateProfileForm;
+export default CreateProfile;
