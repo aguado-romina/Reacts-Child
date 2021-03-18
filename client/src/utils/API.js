@@ -6,7 +6,7 @@ export default {
     return axios.get("/api/profiles");
   },
   
-  getProfiles: function(id) {
+  getProfile: function(id) {
     return axios.get("/api/profiles/" + id);
   },
   
@@ -14,7 +14,7 @@ export default {
     return axios.delete("/api/profiles/" + id);
   },
 
-  saveProfiles: function(postData) {
+  saveProfile: function(postData) {
     return axios.post("/api/profiles", postData);
   }
 };

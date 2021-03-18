@@ -2,13 +2,15 @@ import React, { createContext, useReducer, useContext } from "react";
 import {
   SET_CURRENT_PROFILE,
   REMOVE_PROFILE,
-  UPDATE_PROFILE,
+  UPDATE_PROFILES,
   ADD_PROFILE,
   ADD_MATCH,
   UPDATE_MATCHES,
   REMOVE_MATCH,
-  LOADING 
+  LOADING
 } from "./actions";
+
+
 
 const StoreContext = createContext();
 const { Provider } = StoreContext;
@@ -22,17 +24,17 @@ const reducer = (state, action) => {
       loading: false
     };
 
-  case UPDATE_PROFILE:
+  case UPDATE_PROFILES:
     return {
       ...state,
-      profiles: [...action.profile],
+      profiles: [...action.profiles],
       loading: false
     };
 
   case ADD_PROFILE:
     return {
       ...state,
-      profiles: [action.profile, ...state.profile],
+      profiles: [action.profile, ...state.profiles],
       loading: false
     };
 
@@ -84,9 +86,11 @@ const StoreProvider = ({ value = [], ...props }) => {
       _id: 0,
       puppyParent: "",
       puppyName: "",
-      breed: "",
-      age: "",
+      puppyImage: "",
       bio: "",
+      breed: "",
+      age: ""
+      
     },
     matches: [],
     loading: false

@@ -1,5 +1,3 @@
-// let mongoose = require("mongoose");
-// let db = require("../models");
 
 const mongoose = require("mongoose");
 const db = require("../models");
@@ -12,37 +10,33 @@ mongoose.connect(
 );
 
 const petSeed = [
-    {
-      puppy_parent: "fred",
-      puppy_name: "admin",
-      breed: "bulldog",
-      image: "",
-      bio:
-        "Welcome to your first post! To create posts create a title and body. Don't forget to include your screen name!",
-      age: "10 months"
-    },
-    {
-      puppy_parent: "Sandra",
-      puppy_name: "admin",
-      breed: "",
-      image: "",
-      bio:
-        "Welcome to your first post! To create posts create a title and body. Don't forget to include your screen name!",
-      age: "10 months"
-    },
-    {
-      puppy_parent: "Muna",
-      puppy_name: "admin",
-      breed: "",
-      image: "",
-      bio:
-        "Welcome to your first post! To create posts create a title and body. Don't forget to include your screen name!",
-      age: "10 months"
-    },
+  {
+    puppyParent: "Hello World",
+    puppyName: "admin1",
+    puppyImage:"an image will appear magically",
+    bio: "A little about me",
+    breed: "A breed name",
+    age: "A number that is counted"
+  },
+  {
+    puppyParent: "Hi World",
+    puppyName: "admin2",
+    puppyImage:"an image will appear magically pt 2",
+    bio: "A lot about me",
+    breed: "A breed name2",
+    age: "A number that is counted+2"
+  },
+  {
+    puppyParent: "Yello World",
+    puppyName: "admin3",
+    puppyImage:"an image will appear magically pt 3",
+    bio: "A smidge about me",
+    breed: "A breed name3",
+    age: "A number that is counted+3"
+  }
 ];
 
-db.Puppy
-  .remove({})
+db.Puppy.remove({})
   .then(() => db.Puppy.collection.insertMany(petSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
@@ -52,4 +46,3 @@ db.Puppy
     console.error(err);
     process.exit(1);
   });
-
