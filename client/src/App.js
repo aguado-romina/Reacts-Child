@@ -8,6 +8,7 @@ import { Component } from "react";
 import Signup from "./components/SignUpForm/index"
 import SignupForm from "./components/SignUpForm/index";
 import Welcome from "./pages/Welcome"
+// import Matches from "./pages/Matches"
 import "./index.css";
 
 firebase.initializeApp({
@@ -39,7 +40,11 @@ class App extends Component {
     return (
       <div className="App"> 
        <Router>
-         <Route path="/" component={Welcome} />
+         <Route exact path="/" component={Welcome} />
+         
+         {/* added by Tutor */}
+        {/* <Route exact path="/matches" component={Matches} />*/}
+
       <Route exact path="/signup" component={SignupForm}/>
       {/* <Route exact path="/login" component={} /> */}
     </Router>
