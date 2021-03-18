@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Row, Container } from "../components/Grid";
-import CreateProfileForm from "../components/CreateProfileForm";
+import CreateProfile from "../components/CreateProfile";
 import MatchesList from "../components/MatchesList";
 
 const Home = () => {
@@ -8,7 +8,7 @@ const Home = () => {
     <Container fluid>
       <Row>
         <Col size="md-6">
-          <CreateProfileForm />
+          <CreateProfile />
         </Col>
         <Col size="md-6 sm-12">
           <MatchesList />
