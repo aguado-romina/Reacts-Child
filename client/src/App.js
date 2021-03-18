@@ -1,75 +1,34 @@
 import React from "react";
-import "./App.css";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-// import Welcome from "./pages/Welcome";
-import firebase from "firebase";
-import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
-import { Component } from "react";
-import Signup from "./components/SignUpForm/index"
-import SignupForm from "./components/SignUpForm/index";
-import Welcome from "./pages/Welcome"
-// import Matches from "./pages/Matches"
-import "./index.css";
 
-firebase.initializeApp({
-  apiKey: "AIzaSyB2tdcU5QNdKXSdgZIoNuf6ejdNE5Dkfs8",
-  authDomain: "paw-s-date.firebaseapp.com"
-})
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Welcome from "./pages/Welcome";
+import Signup from "./pages/Signup";
+import LoginPage from "./pages/LoginPage";
+import Detail from "./pages/Detail";
+import NoMatch from "./pages/NoMatch";
+import Nav from "./components/Nav";
+import { StoreProvider } from "./utils/GlobalState";
+import FavoritesList from "./pages/FavoritesList";
 
-class App extends Component {
-  state={ isSignedIn: false }
-  uiConfig = {
-    signInFlow: "popup",
-    signInOptions: [
-      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-      firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-      firebase.auth.EmailAuthProvider.PROVIDER_ID
-    ],
-    callbacks: {
-      signInSuccess: () => false
-    }
-  }
+function App() {
+  return (
+    <Router>
+      <div>
+        <StoreProvider>
+          <Nav />
+          <Switch>
+            <Route exact path="/" component={Welcome} />
+            <Route exact path="/login" component={LoginPage} />
+            
+            <Route exact path="/signup" component={Signup} />
+            <Route exact path="/profiles/:id" component={Detail} />
+            <Route component={NoMatch} />
+          </Switch>
+        </StoreProvider>
 
-  componentDidMount = () => {
-    firebase.auth().onAuthStateChanged(user => {
-      this.setState({ isSignedIn : !! user })
-    })
-  }
-
-  render() {
-    return (
-      <div className="App"> 
-       <Router>
-         <Route exact path="/" component={Welcome} />
-         
-         {/* added by Tutor */}
-        {/* <Route exact path="/matches" component={Matches} />*/}
-
-      <Route exact path="/signup" component={SignupForm}/>
-      {/* <Route exact path="/login" component={} /> */}
-    </Router>
-      {this.state.isSignedIn ? 
-      <span>
-      <div>Signed In!</div>
-      <button onClick={()=>firebase.auth().signOut()}> Sign Out!</button>
-      <h3>Hey {firebase.auth().currentUser.displayName}</h3>
-      <img alt="profile" src={firebase.auth().currentUser.photoURL}/>
-      </span>
-      
-      :
-      (
-        <StyledFirebaseAuth
-        uiConfig={this.uiConfig}
-        firebaseAuth={firebase.auth()}
-        />
-      )
-       }
-       
       </div>
-     
-    );
-  }
-  
+    </Router>
+  );
 }
 
 export default App;
