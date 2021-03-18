@@ -11,11 +11,6 @@ function Welcome() {
           <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
             <span className="block xl:inline">Welcome</span>
             <span className="block text-indigo-600 xl:inline">
-              to Paw's Date
-            </span>
-          </h1>
-          <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-            A letter written from a dog to their human.
           </p>
         </div>
         <div>
@@ -26,6 +21,7 @@ function Welcome() {
                 window.location.pathname === "/" || window.location.pathname === "/signup"}
             >Sign Up</Link>
             </button>
+
             <button>
             <Link
               to="/login"
@@ -33,7 +29,7 @@ function Welcome() {
                 window.location.pathname === "/" || window.location.pathname === "/login"}
             >Login</Link>
             </button>
-            
+
         </div>
       </main>
     </div>
