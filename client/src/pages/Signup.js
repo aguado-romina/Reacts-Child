@@ -1,11 +1,10 @@
-//signup form 
-//what information do we want stored in our database
 import React from "react";
-import CreateProfile from "../components/CreateProfile"
+import SignUpForm from "../components/SignUpForm"
 
 function Signup () {
     return (
-        <CreateProfile></CreateProfile>
+        
+    <SignUpForm></SignUpForm>
     )
 }
 export default Signup;

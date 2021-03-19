@@ -33,7 +33,6 @@ function CreateProfile() {
 
     ParentRef.current.value = "";
     NameRef.current.value = "";
- 
     bioRef.current.value = "";
     breedRef.current.value = "";
     ageRef.current.value = "";
@@ -62,14 +61,14 @@ function CreateProfile() {
             <form action="#" method="POST">
               <div class="shadow overflow-hidden sm:rounded-md">
                 <div class="px-4 py-5 bg-white sm:p-6">
+                <SignUpImg></SignUpImg>
                   <div class="grid grid-cols-6 gap-6">
-                    <SignUpImg></SignUpImg>
                     <div class="col-span-6 sm:col-span-3">
                       <label
                         for="puppy_parent"
                         class="block text-sm font-medium text-gray-700"
                       >
-                        Puppy Parent
+                        My Human
                       </label>
                       <input
                         required
@@ -86,7 +85,7 @@ function CreateProfile() {
                         for="puppy_name"
                         class="block text-sm font-medium text-gray-700"
                       >
-                        Puppy name
+                        My Name
                       </label>
                       <input
                         required
@@ -103,7 +102,7 @@ function CreateProfile() {
                         for="puppy_bio"
                         class="block text-sm font-medium text-gray-700"
                       >
-                        Bio
+                        About Me
                       </label>
                       <input
                         ref={bioRef}
@@ -119,7 +118,7 @@ function CreateProfile() {
                         for="puppy_breed"
                         class="block text-sm font-medium text-gray-700"
                       >
-                        Breed
+                        What I am
                       </label>
                       <input
                         ref={breedRef}
@@ -135,7 +134,7 @@ function CreateProfile() {
                         for="puppy_age"
                         class="block text-sm font-medium text-gray-700"
                       >
-                        Age
+                        How Old I Am
                       </label>
                       <input
                         ref={ageRef}

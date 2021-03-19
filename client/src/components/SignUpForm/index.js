@@ -1,49 +1,31 @@
-import React, { useCallback, useContext } from "react";
-import { withRouter, Redirect } from "react-router";
+import React, { useCallback } from "react";
+import { withRouter } from "react-router";
 import AuthApp from "../../firebase";
-import { AuthContext } from "../../AuthContext";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
-const Login = ({ history }) => {
-  const handleLogin = useCallback(
-    async (event) => {
-      event.preventDefault();
-      const { email, password } = event.target.elements;
-      try {
-        await AuthApp.auth().signInWithEmailAndPassword(
-          email.value,
-          password.value
-        );
-        console.log(email);
-        history.push("/");
-      } catch (error) {
-        alert(error);
-      }
-    },
-    [history]
-  );
-  const currentUser  = useContext(AuthContext);
-  if (currentUser) {
-    console.log(currentUser);
-    return <Redirect to="/profile" />;
-  }
+const SignUp = ({ history }) => {
+  const handleSignUp = useCallback(async event => {
+    event.preventDefault();
+    const { email, password } = event.target.elements;
+    try {
+      await AuthApp
+        .auth()
+        .createUserWithEmailAndPassword(email.value, password.value);
+      history.push("/");
+    } catch (error) {
+      alert(error);
+    }
+  }, [history]);
   return (
     <div class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div class="max-w-md w-full space-y-8">
         <div>
           <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
-            Sign in to your account
+            Sign up for an account
           </h2>
-          <p class="mt-2 text-center text-sm text-gray-600">
-            Or
-            <Link
-              to="/signup"
-              className={
-                window.location.pathname === "/login" || window.location.pathname === "/signup"}
-            >Sign Up</Link>
-          </p>
+        
         </div>
-        <form OnSubmit={handleLogin} class="mt-8 space-y-6" action="#" method="POST">
+        <form OnSubmit={handleSignUp} class="mt-8 space-y-6" action="#" method="POST">
           <input type="hidden" name="remember" value="true" />
           <div class="rounded-md shadow-sm -space-y-px">
             <div>
@@ -107,7 +89,14 @@ const Login = ({ history }) => {
               <span class="absolute left-0 inset-y-0 flex items-center pl-3">
              
               </span>
-              Sign in
+              <p class="mt-2 text-center text-sm text-gray-600">
+            Or
+            <Link
+              to="/createprofile"
+              className={
+                window.location.pathname === "/signup" || window.location.pathname === "/createprofile"}
+            >Sign Up</Link>
+          </p>
             </button>
           </div>
         </form>
@@ -115,5 +104,4 @@ const Login = ({ history }) => {
     </div>
   );
 };
-
-export default withRouter(Login);
+export default withRouter(SignUp);
