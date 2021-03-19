@@ -7,6 +7,10 @@ const petSchema = new Schema({
     type: Date,
     default: Date.now,
   },
+  currentUser: {
+    type: String,
+    required: true,
+  },
   puppyParent: {
     type: String,
     required: true,

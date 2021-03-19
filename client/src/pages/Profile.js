@@ -7,11 +7,16 @@
 import React from "react";
 import AuthApp from "../firebase";
 import {Redirect} from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../AuthContext";
+import axios from "axios";
 
 const Profile = ({ history }) => {
   const {currentUser} = useContext(AuthContext);
+  useEffect(() => {
+    axios.get(`/api/profiles/${currentUser.uid}`)
+    .then((res) => {console.log(res.data)})
+  }, []);
   console.log(currentUser)
   return (
     <>

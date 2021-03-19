@@ -1,11 +1,13 @@
-import React, { useRef } from "react";
+import React, { useRef, useContext } from "react";
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_PROFILE, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
 import SignUpImg from "../UploadImages/SignUpImg/index";
 import {Link} from "react-router-dom";
+import { AuthContext } from "../../AuthContext";
 
 function CreateProfile() {
+  const { currentUser } = useContext(AuthContext);
   const ParentRef = useRef();
   const NameRef = useRef();
   const breedRef = useRef();
@@ -17,9 +19,9 @@ function CreateProfile() {
     e.preventDefault();
     dispatch({ type: LOADING });
     API.saveProfile({
+      currentUser: currentUser.uid,
       puppyParent: ParentRef.current.value,
       puppyName: NameRef.current.value,
-    
       bio: bioRef.current.value,
       breed: breedRef.current.value,
       age: ageRef.current.value,
