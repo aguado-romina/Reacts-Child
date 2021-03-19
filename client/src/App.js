@@ -1,4 +1,5 @@
 import React from "react";
+
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Welcome from "./pages/Welcome";
 import CreateProfileForm from "./pages/CreateProfileForm";
@@ -26,6 +27,7 @@ function App() {
             <Route component={NoMatch} />
           </Switch>
         </StoreProvider>
+
       </div>
     </Router>
     </AuthProvider>
