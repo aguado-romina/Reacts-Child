@@ -22,19 +22,19 @@ const [password, setPassword] = useState();
     }
   }, [history, email, password]);
   return (
-    <div class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div class="max-w-md w-full space-y-8">
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-md w-full space-y-8">
         <div>
-          <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
+          <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
             Sign up for an account
           </h2>
         
         </div>
-        <form onSubmit={handleSignUp} class="mt-8 space-y-6">
+        <form onSubmit={handleSignUp} className="mt-8 space-y-6">
           <input type="hidden" name="remember" value="true" />
-          <div class="rounded-md shadow-sm -space-y-px">
+          <div className="rounded-md shadow-sm -space-y-px">
             <div>
-              <label for="email-address" class="sr-only">
+              <label htmlFor="email-address" className="sr-only">
                 Email address
               </label>
               <input
@@ -43,14 +43,14 @@ const [password, setPassword] = useState();
                 id="email-address"
                 name="email"
                 type="email"
-                autocomplete="email"
+                autoComplete="email"
                 required
-                class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 placeholder="Email address"
               />
             </div>
             <div>
-              <label for="password" class="sr-only">
+              <label htmlFor="password" className="sr-only">
                 Password
               </label>
               <input
@@ -59,9 +59,9 @@ const [password, setPassword] = useState();
                 id="password"
                 name="password"
                 type="password"
-                autocomplete="current-password"
+                autoComplete="current-password"
                 required
-                class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 placeholder="Password"
               />
             </div>
@@ -71,7 +71,7 @@ const [password, setPassword] = useState();
          
             <button
               type="submit"
-              class="text-white group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="text-white group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
             
             Sign Up
