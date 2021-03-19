@@ -44,7 +44,6 @@ function Welcome() {
                 window.location.pathname === "/" || window.location.pathname === "/login"}
             >Login</Link>
             </button>
-
         </div>
       </main>
     </div>

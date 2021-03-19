@@ -11,7 +11,8 @@ export default {
   },
   
   updateProfiles: function(id) {
-    return axios.put("/api/profiles/:id" + id);
+    return axios.put("/api/profiles/" + id);
+
   },
 
   deleteProfiles: function(id) {

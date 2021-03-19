@@ -1,0 +1,5 @@
+.wrapper{
+    display:grid;
+    height:50;
+    place-items:center
+  }
