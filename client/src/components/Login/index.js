@@ -3,6 +3,8 @@ import { withRouter, Redirect } from "react-router";
 import AuthApp from "../../firebase";
 import { AuthContext } from "../../AuthContext";
 import {Link} from "react-router-dom";
+import "tailwindcss/tailwind.css"
+
 
 const Login = ({ history }) => {
   const handleLogin = useCallback(
@@ -28,8 +30,9 @@ const Login = ({ history }) => {
     return <Redirect to="/Profile" />;
   }
   return (
-    <div class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div class="max-w-md w-full space-y-8">
+    <div class="flex items-center justify-center h-screen">
+    
+    <div class="bg-indigo-800 text-white font-bold rounded-lg border shadow-lg p-10">
         <div>
           <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
             Sign in to your account
