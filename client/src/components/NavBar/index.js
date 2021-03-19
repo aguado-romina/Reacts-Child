@@ -1,17 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-import CreateProfile from “../components/CreateProfile/index”
-import AuthApp from “../firebase”;
-const Profile = () => {
-  return (
-    <>
-      <h1>Profile signOut</h1>
-      <button onClick={() => AuthApp.auth().signOut()}>Sign out</button>
-    </>
-  );
-};
-export default Profile;
+
+// import CreateProfile from "../components/CreateProfile/index"
+// import AuthApp from "../firebase";
+// const Profile = () => {
+//   return (
+//     <>
+//       <h1>Profile signOut</h1>
+//       <button onClick={() => AuthApp.auth().signOut()}>Sign out</button>
+//     </>
+//   );
+// };
+// export default Profile;
 
 function NavBar() {
   return (
