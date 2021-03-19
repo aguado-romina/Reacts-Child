@@ -1,10 +1,13 @@
-import React, { useRef } from "react";
+import React, { useRef, useContext } from "react";
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_PROFILE, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
 import SignUpImg from "../UploadImages/SignUpImg/index";
+import {Link} from "react-router-dom";
+import { AuthContext } from "../../AuthContext";
 
 function CreateProfile() {
+  const { currentUser } = useContext(AuthContext);
   const ParentRef = useRef();
   const NameRef = useRef();
   const breedRef = useRef();
@@ -16,9 +19,9 @@ function CreateProfile() {
     e.preventDefault();
     dispatch({ type: LOADING });
     API.saveProfile({
+      currentUser: currentUser.uid,
       puppyParent: ParentRef.current.value,
       puppyName: NameRef.current.value,
-    
       bio: bioRef.current.value,
       breed: breedRef.current.value,
       age: ageRef.current.value,
@@ -33,7 +36,6 @@ function CreateProfile() {
 
     ParentRef.current.value = "";
     NameRef.current.value = "";
- 
     bioRef.current.value = "";
     breedRef.current.value = "";
     ageRef.current.value = "";
@@ -62,14 +64,14 @@ function CreateProfile() {
             <form action="#" method="POST">
               <div class="shadow overflow-hidden sm:rounded-md">
                 <div class="px-4 py-5 bg-white sm:p-6">
+                <SignUpImg></SignUpImg>
                   <div class="grid grid-cols-6 gap-6">
-                    <SignUpImg></SignUpImg>
                     <div class="col-span-6 sm:col-span-3">
                       <label
                         for="puppy_parent"
                         class="block text-sm font-medium text-gray-700"
                       >
-                        Puppy Parent
+                        My Human
                       </label>
                       <input
                         required
@@ -86,7 +88,7 @@ function CreateProfile() {
                         for="puppy_name"
                         class="block text-sm font-medium text-gray-700"
                       >
-                        Puppy name
+                        My Name
                       </label>
                       <input
                         required
@@ -103,7 +105,7 @@ function CreateProfile() {
                         for="puppy_bio"
                         class="block text-sm font-medium text-gray-700"
                       >
-                        Bio
+                        About Me
                       </label>
                       <input
                         ref={bioRef}
@@ -119,7 +121,7 @@ function CreateProfile() {
                         for="puppy_breed"
                         class="block text-sm font-medium text-gray-700"
                       >
-                        Breed
+                        What I am
                       </label>
                       <input
                         ref={breedRef}
@@ -135,7 +137,7 @@ function CreateProfile() {
                         for="puppy_age"
                         class="block text-sm font-medium text-gray-700"
                       >
-                        Age
+                        How Old I Am
                       </label>
                       <input
                         ref={ageRef}
@@ -149,6 +151,7 @@ function CreateProfile() {
                   </div>
                 </div>
                 <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+            
                   <button
                     type="submit"
                     class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
@@ -157,6 +160,7 @@ function CreateProfile() {
                   >
                     Create Profile
                   </button>
+                 
                 </div>
               </div>
             </form>
