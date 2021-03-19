@@ -25,6 +25,7 @@ function UpdateProfile() {
       age: ageRef.current.value,
     })
       .then((result) => {
+        console.log("are you working??");
         dispatch({
           type: UPDATE_PROFILES,
           profile: result.data,
@@ -149,11 +150,6 @@ function UpdateProfile() {
                   </div>
                 </div>
                 <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
-                <Link
-              to="/profile"
-              className={
-                window.location.pathname === "/createprofile" || window.location.pathname === "/profile"}
-            >
                   <button
                     type="submit"
                     class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-black bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
@@ -162,7 +158,6 @@ function UpdateProfile() {
                   >
                     + Update Profile
                   </button>
-                  </Link>
                   <button
                     type="submit"
                     class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-black bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
