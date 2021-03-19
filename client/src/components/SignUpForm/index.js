@@ -1,21 +1,26 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import { withRouter } from "react-router";
 import AuthApp from "../../firebase";
-import {Link} from "react-router-dom";
+import {Redirect} from "react-router-dom";
 
 const SignUp = ({ history }) => {
-  const handleSignUp = useCallback(async event => {
-    event.preventDefault();
-    const { email, password } = event.target.elements;
+  const [email, setEmail] = useState();
+const [password, setPassword] = useState();
+  const handleSignUp = useCallback(
+    async (event) => {
+      event.preventDefault();
+      // const { email, password } = event.target.elements;
+      console.log(email, password)
     try {
       await AuthApp
         .auth()
-        .createUserWithEmailAndPassword(email.value, password.value);
-      history.push("/");
+        .createUserWithEmailAndPassword(email, password);
+      history.push("/createprofile");
+    
     } catch (error) {
       alert(error);
     }
-  }, [history]);
+  }, [history, email, password]);
   return (
     <div class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div class="max-w-md w-full space-y-8">
@@ -25,7 +30,7 @@ const SignUp = ({ history }) => {
           </h2>
         
         </div>
-        <form OnSubmit={handleSignUp} class="mt-8 space-y-6" action="#" method="POST">
+        <form onSubmit={handleSignUp} class="mt-8 space-y-6">
           <input type="hidden" name="remember" value="true" />
           <div class="rounded-md shadow-sm -space-y-px">
             <div>
@@ -33,6 +38,8 @@ const SignUp = ({ history }) => {
                 Email address
               </label>
               <input
+              onChange={(e) => {setEmail(e.target.value)}}
+              value={email}
                 id="email-address"
                 name="email"
                 type="email"
@@ -47,6 +54,8 @@ const SignUp = ({ history }) => {
                 Password
               </label>
               <input
+              onChange={(e) => {setPassword(e.target.value)}}
+              value={password}
                 id="password"
                 name="password"
                 type="password"
@@ -59,24 +68,16 @@ const SignUp = ({ history }) => {
           </div>
 
           <div>
-          <Link
-              to="/createprofile"
-              className={
-                window.location.pathname === "/signup" || window.location.pathname === "/createprofile"}
-            >
+         
             <button
               type="submit"
               class="text-white group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
-              <span class="absolute left-0 inset-y-0 flex items-center pl-3">
-             
-              </span>
-              <p class="mt-2 text-center text-sm text-gray-600">
-        
+            
             Sign Up
-          </p>
+          
             </button>
-            </Link>
+          
           </div>
         </form>
       </div>

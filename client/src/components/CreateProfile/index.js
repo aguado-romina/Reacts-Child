@@ -150,9 +150,9 @@ function CreateProfile() {
                 </div>
                 <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
                 <Link
-              to="/matches"
+              to="/profile"
               className={
-                window.location.pathname === "/createproflie" || window.location.pathname === "/matches"}
+                window.location.pathname === "/createprofile" || window.location.pathname === "/profile"}
             >
                   <button
                     type="submit"

@@ -7,10 +7,12 @@ import LoginPage from "./pages/LoginPage";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import { StoreProvider } from "./utils/GlobalState";
-import FavoritesList from "./pages/FavoritesList";
+import Profile from "./pages/Profile";
+import { AuthProvider } from "./AuthContext";
 
 function App() {
   return (
+    <AuthProvider>
     <Router>
       <div>
         <StoreProvider>
@@ -19,12 +21,14 @@ function App() {
             <Route exact path="/login" component={LoginPage} />
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/createprofile" component={CreateProfileForm} />
+            <Route exact path="/profile" component={Profile} />
             <Route exact path="/profiles/:id" component={Detail} />
             <Route component={NoMatch} />
           </Switch>
         </StoreProvider>
       </div>
     </Router>
+    </AuthProvider>
   );
 }
 
