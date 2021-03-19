@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Welcome() {
   return (
-    <div className="relative bg-white overflow-hidden">
+    <div className="relative bg-white overflow-hidden md:flex md:justify-center mb-6">
       
 
       <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
@@ -17,7 +17,7 @@ function Welcome() {
 
               <div className="flex flex-wrap justify-center">
   <div className="w-6/12 sm:w-4/12 px-4">
-    <img src="https://github.com/aguado-romina/Reacts-Child/blob/roxie/client/src/images/background1.png?raw=true" alt="testing" className="shadow rounded-full max-w-full h-auto align-middle border-none" />
+    <img src="https://github.com/aguado-romina/Reacts-Child/blob/roxie/client/src/images/puppy.gif?raw=true" alt="testing" className="shadow rounded-full max-w-full h-auto align-middle border-none" />
   </div>
 </div>
 
