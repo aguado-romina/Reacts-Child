@@ -6,10 +6,8 @@ import Signup from "./pages/Signup";
 import LoginPage from "./pages/LoginPage";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
-import Nav from "./components/Nav";
 import { StoreProvider } from "./utils/GlobalState";
 import FavoritesList from "./pages/FavoritesList";
-import CreateProfile from "./components/CreateProfile";
 
 function App() {
   return (
