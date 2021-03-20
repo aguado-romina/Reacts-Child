@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/aguado-romina/Reacts-Child#readme",
   "dependencies": {
+    "@craco/craco": "^6.1.1",
     "axios": "^0.21.1",
     "babel-eslint": "^10.1.0",
     "dotenv": "^8.2.0",
@@ -43,12 +44,13 @@
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.2.5",
+    "@tailwindcss/postcss7-compat": "^2.0.4",
+    "autoprefixer": "^9.8.6",
     "concurrently": "^4.1.0",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.22.0",
     "nodemon": "^1.18.7",
-    "postcss": "^8.2.8",
-    "tailwindcss": "^2.0.4"
+    "postcss": "^7.0.35",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.4"
   }
 }
