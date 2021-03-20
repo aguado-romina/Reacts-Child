@@ -1,6 +1,8 @@
 // the landing page
 import React from "react";
 import { Link } from "react-router-dom";
+import List from "../components/List";
+
 
 function Welcome() {
   return (
@@ -46,6 +48,7 @@ function Welcome() {
             </button>
         </div>
       </main>
+      
     </div>
   );
 }
