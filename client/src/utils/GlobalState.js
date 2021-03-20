@@ -27,7 +27,7 @@ const reducer = (state, action) => {
   case UPDATE_PROFILES:
     return {
       ...state,
-      profiles: [...action.profiles],
+      profiles: [...action.profile],
       loading: false
     };
 

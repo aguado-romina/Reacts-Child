@@ -34,10 +34,10 @@ function UpdateProfile() {
     API.updateProfiles(id, updateObject)
       .then((result) => {
         console.log("are you working??");
-        dispatch({
-          type: UPDATE_PROFILES,
-          profile: result.data,
-        });
+        // dispatch({
+        //   type: UPDATE_PROFILES,
+        //   profile: result.data,
+        // });
       })
       .catch((err) => console.log(err));
     ParentRef.current.value = "";
