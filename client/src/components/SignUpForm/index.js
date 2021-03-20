@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from "react";
 import { withRouter } from "react-router";
 import AuthApp from "../../firebase";
-import {Redirect} from "react-router-dom";
+//import {Redirect} from "react-router-dom";
 
 const SignUp = ({ history }) => {
   const [email, setEmail] = useState();
@@ -10,7 +10,7 @@ const [password, setPassword] = useState();
     async (event) => {
       event.preventDefault();
       // const { email, password } = event.target.elements;
-      console.log(email, password)
+      // console.log(email, password)
     try {
       await AuthApp
         .auth()
@@ -71,7 +71,7 @@ const [password, setPassword] = useState();
          
             <button
               type="submit"
-              className="text-white group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="text-white group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
             
             Sign Up
