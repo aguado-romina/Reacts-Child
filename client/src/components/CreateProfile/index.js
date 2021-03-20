@@ -2,7 +2,7 @@ import React, { useRef, useContext } from "react";
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_PROFILE, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
-import SignUpImg from "../UploadImages/SignUpImg/index";
+import Allcompailed from "../UploadImages/Allcompailed";
 import { AuthContext } from "../../AuthContext";
 
 function CreateProfile() {
@@ -63,7 +63,7 @@ function CreateProfile() {
             <form action="#" method="POST">
               <div className="shadow overflow-hidden sm:rounded-md">
                 <div className="px-4 py-5 bg-white sm:p-6">
-                <SignUpImg></SignUpImg>
+                <Allcompailed></Allcompailed>
                   <div className="grid grid-cols-6 gap-6">
                     <div className="col-span-6 sm:col-span-3">
                       <label

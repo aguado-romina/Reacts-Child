@@ -3,17 +3,15 @@ import Notifications, { notify } from "react-notify-toast";
 import Spinner from "./Spinner";
 import Images from "./Images";
 import Buttons from "./Buttons";
-import WakeUp from "./WakeUp";
-import Footer from "./Footer";
-import { API_URL } from "./config";
-import "./App.css";
+import { API_URL } from "../../config";
+
 
 const toastColor = {
   background: "#505050",
   text: "#fff",
 };
 
-export default class App extends Component {
+export default class Allcompailed extends Component {
   state = {
     loading: true,
     uploading: false,
