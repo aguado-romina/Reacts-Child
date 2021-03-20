@@ -41,7 +41,10 @@ function CreateProfile() {
   };
 
   return (
-    <div>
+   
+       <div className="container bg-white px-10 mx-auto rounded-lg flex justify-center">
+    
+    
       <div className="hidden sm:block" aria-hidden="true">
         <div className="py-5">
           <div className="border-t border-gray-200"></div>
@@ -153,7 +156,8 @@ function CreateProfile() {
             
                   <button
                     type="submit"
-                    className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    className="group relative flex justify-center py-2 px-4 border border-transparent text-sm text-white font-medium rounded-md bg-lightblue hover:bg-darkblue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightblue"
+            
                     onClick={handleSubmit}
                     disabled={state.loading}
                   >

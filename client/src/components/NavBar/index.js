@@ -10,14 +10,16 @@ const NavBar = ({ history }) => {
     setIsOpen(!isOpen);
   }
   return (
-    <nav className="bg-gray-800">
-      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+
+    
+    <nav className="bg-white h-auto">
+      <div className="max-w-7xl h-0 mx-auto px-2 sm:px-6 sm:px-8 p-1">
         <div className="relative flex items-center justify-left h-16">
           <div className="absolute inset-y-0 left-0 flex items-center">
             <button
               onClick={handleClick}
               type="button"
-              className="block lg:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              className="block md:hidden inline-flex h-5 items-center justify-center p-2 rounded-md text-black hover:text-white hover:bg-lightblue focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
             >
               <svg
                 className="h-6 w-6 fill-current"
@@ -52,7 +54,7 @@ const NavBar = ({ history }) => {
                   to="/swipe"
                   className={window.location.pathname === "/swipe"}
                 >
-                  <div className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                  <div className="text-black hover:bg-orangedark hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Start Swiping
                   </div>
                 </Link>
@@ -60,7 +62,7 @@ const NavBar = ({ history }) => {
                   to="/matches"
                   className={window.location.pathname === "/matches"}
                 >
-                  <div className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                  <div className="text-black hover:bg-darkblue hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     You Matches
                   </div>
                 </Link>
@@ -68,7 +70,7 @@ const NavBar = ({ history }) => {
                   to="/matches"
                   className={window.location.pathname === "/matches"}
                 >
-                  <div className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                  <div className="text-black hover:bg-orangelight hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Profile
                   </div>
                 </Link>
@@ -78,9 +80,9 @@ const NavBar = ({ history }) => {
           {/* DESKTOP VIEW */}
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex-shrink-0 flex items-center"></div>
-            <div className="hidden sm:block sm:ml-6">
-              <div className="flex space-x-4">
-                <div className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">
+            <div className="hidden sm:block sm:ml-10">
+              <div className="flex space-x-2">
+                <div className="bg-lightblue text-white px-2 py-2 rounded-md text-sm font-medium">
                   Welcome
                 </div>
 
@@ -88,7 +90,7 @@ const NavBar = ({ history }) => {
                   to="/swipe"
                   className={window.location.pathname === "/swipe"}
                 >
-                  <div className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                  <div className="text-black hover:bg-orangedark hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Start Swiping
                   </div>
                 </Link>
@@ -96,7 +98,7 @@ const NavBar = ({ history }) => {
                   to="/matches"
                   className={window.location.pathname === "/matches"}
                 >
-                  <div className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                  <div className="text-black hover:bg-yellowlight hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     You Matches
                   </div>
                 </Link>
@@ -104,7 +106,7 @@ const NavBar = ({ history }) => {
                   to="/matches"
                   className={window.location.pathname === "/matches"}
                 >
-                  <div className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                  <div className="text-black hover:bg-darkblue hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Profile
                   </div>
                 </Link>
@@ -113,7 +115,8 @@ const NavBar = ({ history }) => {
           </div>
 
           <button
-            className="text-white group relative flex float-right py-2 px-4 border border-transparent text-sm font-medium rounded-md bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-500"
+            className="group relative flex justify-center py-2 px-4 border border-transparent text-sm text-white font-medium rounded-md bg-orangelight hover:bg-yellowlight focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightblue"
+          
             onClick={() => {
               AuthApp.auth().signOut();
               return history.push("/");

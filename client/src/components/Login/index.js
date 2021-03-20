@@ -33,14 +33,19 @@ const [password, setPassword] = useState();
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full space-y-8">
-        <div>
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+
+    <div className="max-w-lg container bg-white px-10 mx-auto rounded-lg flex justify-center">
+      
+    
+    <div className=" max-w-md w-full space-y-8">
+      <div>
+        <h2 className="flex justify-center mt-6 text-3xl font-extrabold text-gray-900">
             Sign in to your account
           </h2>
-          <p className="mt-2 text-center text-sm text-gray-600">
-            Or
+          <div className="mt-2 text-center text-sm text-black">
+             or</div>
+          <p className="mt-2 text-center text-sm text-orangedark">
+             
             <Link
               to="/signup"
               className={
@@ -48,7 +53,7 @@ const [password, setPassword] = useState();
                 window.location.pathname === "/signup"
               }
             >
-              Sign Up
+               Sign Up
             </Link>
           </p>
         </div>
@@ -119,7 +124,8 @@ const [password, setPassword] = useState();
           
               <button
                 type="submit"
-                className="text-white group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className="group relative flex justify-center py-2 px-4 border border-transparent text-sm text-white font-medium rounded-md bg-lightblue hover:bg-darkblue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightblue "
+              
               >
       
                 Sign in
