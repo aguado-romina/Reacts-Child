@@ -14,12 +14,12 @@ const Detail = (props) => {
       .catch((err) => console.log(err));
   }, []);
 
-  const addFavorite = () => {
+  function addFavorite() {
     dispatch({
       type: ADD_MATCH,
       profile: state.currentProfile,
     });
-  };
+  }
 
   const removeFavorite = () => {
     dispatch({
