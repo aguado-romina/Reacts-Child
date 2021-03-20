@@ -19,14 +19,19 @@ function UpdateProfile() {
     setModalIsOpen(false);
     e.preventDefault();
     dispatch({ type: LOADING });
-let id = { currentUser: currentUser.uid };
-    API.updateProfiles(id, {
+    let id = currentUser.uid;
+    const updateObject = {
       puppyParent: ParentRef.current.value,
       puppyName: NameRef.current.value,
       bio: bioRef.current.value,
       breed: breedRef.current.value,
       age: ageRef.current.value,
-    })
+    }
+    // {
+
+    // }
+    console.log("The things:", updateObject);
+    API.updateProfiles(id, updateObject)
       .then((result) => {
         console.log("are you working??");
         dispatch({
