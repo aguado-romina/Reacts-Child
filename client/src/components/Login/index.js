@@ -7,12 +7,12 @@ import { Link } from "react-router-dom";
 const Login = ({ history }) => {
 const [email, setEmail] = useState();
 const [password, setPassword] = useState();
-  console.log("hello? help")
+  // console.log("hello? help")
   const handleLogin = useCallback(
     async (event) => {
       event.preventDefault();
       // const { email, password } = event.target.elements;
-      console.log(email, password)
+      // console.log(email, password)
       try {
         await AuthApp.auth().signInWithEmailAndPassword(
           email,
@@ -27,7 +27,7 @@ const [password, setPassword] = useState();
     [history, email, password]
   );
   const { currentUser } = useContext(AuthContext);
-  console.log(currentUser, "hacker voice: i'm in");
+  // console.log(currentUser, "hacker voice: i'm in");
   if (currentUser) {
     return <Redirect to="/profile" />;
   }
@@ -119,7 +119,7 @@ const [password, setPassword] = useState();
           
               <button
                 type="submit"
-                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className="text-white group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
       
                 Sign in

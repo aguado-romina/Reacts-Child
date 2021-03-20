@@ -5,12 +5,12 @@
 // people can mark their favorite dog park and show it to other users or not
 
 import React from "react";
-import AuthApp from "../firebase";
-import UpdateProfile from "../components/UpdateProfile";
-import { Redirect } from "react-router-dom";
+
+import UpdateProfile from "../components/UpdateProfile"
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../AuthContext";
 import axios from "axios";
+import NavBar from "../components/NavBar";
 
 const Profile = ({ history }) => {
   const { currentUser } = useContext(AuthContext);
@@ -22,19 +22,9 @@ const Profile = ({ history }) => {
   console.log(currentUser);
   return (
     <>
-      <div>
-        <h1>Hello You made it!</h1>
+      <NavBar />
         <UpdateProfile></UpdateProfile>
-      </div>
-
-      <button
-        onClick={() => {
-          AuthApp.auth().signOut();
-          history.push("/");
-        }}
-      >
-        Sign out
-      </button>
+      
     </>
   );
 };
