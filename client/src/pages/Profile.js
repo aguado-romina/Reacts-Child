@@ -20,10 +20,9 @@ const Profile = ({ history }) => {
   return (
     <>
     <NavBar />
-    {/* <ProfileCard></ProfileCard> */}
-        <UpdateProfile></UpdateProfile>
-        
-<Match></Match>
+    <UpdateProfile></UpdateProfile>
+    <ProfileCard></ProfileCard>
+    <Match></Match>
 
 
 
