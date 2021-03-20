@@ -14,8 +14,9 @@ export default {
     return axios.get("/api/profiles/" + id);
   },
   
-  updateProfiles: function(id) {
-    return axios.put("/api/profiles/" + id);
+  updateProfiles: function(id, updateObject) {
+    console.log("ID PASSED IN ", id, updateObject);
+    return axios.put("/api/profiles/" + id, updateObject);
 
   },
 
