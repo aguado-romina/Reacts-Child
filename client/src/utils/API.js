@@ -1,9 +1,10 @@
 import axios from "axios";
+import puppy from "../puppies.json"
 
 export default {
 
-  getRandomDog: function() {
-    return axios.get("https://dog.ceo/api/breeds/image/random");
+  getRandomProfile: function() {
+    return axios.get(puppy);
   },
 
   getProfiles: function() {

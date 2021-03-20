@@ -14,7 +14,11 @@ function App() {
   return (
     <AuthProvider>
     <Router>
-      <div>
+    <div style={{ 
+      backgroundImage: `url("https://github.com/aguado-romina/Reacts-Child/blob/roxie/client/src/images/background1.png?raw=true")` 
+    }}>
+
+
         <StoreProvider>
           <Switch>
             <Route exact path="/" component={Welcome} />
