@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from "react";
 import { withRouter } from "react-router";
 import AuthApp from "../../firebase";
-import {Redirect} from "react-router-dom";
+//import {Redirect} from "react-router-dom";
 
 const SignUp = ({ history }) => {
   const [email, setEmail] = useState();
