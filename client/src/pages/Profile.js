@@ -1,16 +1,13 @@
-// where users can update their info
-// maybe upload photos
-
-// where we could put the google maps api dog park
-// people can mark their favorite dog park and show it to other users or not
 
 import React from "react";
 
 import UpdateProfile from "../components/UpdateProfile"
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../AuthContext";
+import Match from "../components/Match";
 import axios from "axios";
 import NavBar from "../components/NavBar";
+import ProfileCard from "../components/ProfileCard";
 
 const Profile = ({ history }) => {
   const { currentUser } = useContext(AuthContext);
@@ -22,11 +19,17 @@ const Profile = ({ history }) => {
   console.log(currentUser);
   return (
     <>
-      <NavBar />
+    <NavBar />
+    {/* <ProfileCard></ProfileCard> */}
         <UpdateProfile></UpdateProfile>
-      
+        
+<Match></Match>
+
+
+
     </>
   );
 };
 
 export default Profile;
+

@@ -1,7 +1,11 @@
 import axios from "axios";
 
 export default {
-  
+
+  getRandomDog: function() {
+    return axios.get("https://dog.ceo/api/breeds/image/random");
+  },
+
   getProfiles: function() {
     return axios.get("/api/profiles");
   },
@@ -10,8 +14,9 @@ export default {
     return axios.get("/api/profiles/" + id);
   },
   
-  updateProfiles: function(id) {
-    return axios.put("/api/profiles/" + id);
+  updateProfiles: function(id, updateObject) {
+    console.log("ID PASSED IN ", id, updateObject);
+    return axios.put("/api/profiles/" + id, updateObject);
 
   },
 
