@@ -19,7 +19,7 @@ module.exports = {
   update: function (req, res) {
     console.log("Got a request!", req.params.id, req.body);
     db.Puppy.findOneAndUpdate({ currentUser: req.params.id }, req.body)
-      .then((dbModel) => res.json(dbModel))
+      .then((dbModel) => res.json(dbModel), console.log("checking"))
       .catch((err) => {
         console.log("Bad request my friends", err);
         res.status(422).json(err);

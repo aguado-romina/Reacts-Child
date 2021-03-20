@@ -30,7 +30,7 @@ function UpdateProfile() {
     // {
 
     // }
-    console.log("The things:", updateObject);
+    // console.log("The things:", updateObject);
     API.updateProfiles(id, updateObject)
       .then((result) => {
         console.log("are you working??");
