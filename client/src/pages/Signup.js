@@ -27,8 +27,9 @@ function Signup() {
             </Link>
           </p>
         </button> */}
-    </div>
-    </div>
+
+</div>
+</div>
   );
 }
 export default Signup;
