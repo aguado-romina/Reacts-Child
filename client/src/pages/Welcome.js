@@ -1,6 +1,8 @@
 // the landing page
 import React from "react";
 import { Link } from "react-router-dom";
+import List from "../components/List";
+
 
 function Welcome() {
   return (
@@ -44,9 +46,9 @@ function Welcome() {
                 window.location.pathname === "/" || window.location.pathname === "/login"}
             >Login</Link>
             </button>
-
         </div>
       </main>
+      
     </div>
   );
 }

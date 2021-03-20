@@ -10,6 +10,11 @@ export default {
     return axios.get("/api/profiles/" + id);
   },
   
+  updateProfiles: function(id) {
+    return axios.put("/api/profiles/" + id);
+
+  },
+
   deleteProfiles: function(id) {
     return axios.delete("/api/profiles/" + id);
   },
