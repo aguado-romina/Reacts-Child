@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import registerServiceWorker from "./registerServiceWorker";
+import "tailwindcss/tailwind.css";
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -10,5 +10,4 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-registerServiceWorker();
 

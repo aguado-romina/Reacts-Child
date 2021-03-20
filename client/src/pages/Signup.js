@@ -1,27 +1,30 @@
-//signup form 
-//what information do we want stored in our database
 import React from "react";
-import Signup from "../components/SignUpForm/index";
-import API from "../utils/API";
+import SignUpForm from "../components/SignUpForm";
+import { Link } from "react-router-dom";
 
-class Signup extends Component{
-    constructor(props){
-        super(props)
-        this.state = {
-
-    } 
-
-}
-
-signUp = () => {
-    // const puppyParent = this.props.puppyParent;
-    // const puppyName = this.props.puppyName;
-    // const breed = this.props.breed;
-    // const age = this.props.age;
-    // const puppyImage = this.props.puppyImage;
-}
-render() {
-
-}
+function Signup() {
+  return (
+      <div>
+    <SignUpForm></SignUpForm>
+    
+        {/* <button
+          type="submit"
+          className="text-white group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        >
+          <span className="absolute left-0 inset-y-0 flex items-center pl-3"></span>
+          <p className="mt-2 text-center text-sm text-gray-600">
+            <Link
+              to="/createprofile"
+              classNameName={
+                window.location.pathname === "/signup" ||
+                window.location.pathname === "/createprofile"
+              }
+            >
+              Sign Up
+            </Link>
+          </p>
+        </button> */}
+    </div>
+  );
 }
 export default Signup;
