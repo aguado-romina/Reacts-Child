@@ -28,7 +28,7 @@ const NavBar = ({ history }) => {
           <div className="flex space-x-4">
             <a href="#" className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Welcome</a>
             <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Profile</a>
-            <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Your Matches</a>
+            <a href="/match" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Your Matches</a>
             <button
         className="text-white group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-500"
           onClick={() => {
