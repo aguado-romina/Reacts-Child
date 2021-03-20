@@ -10,6 +10,7 @@ import UpdateProfile from "../components/UpdateProfile";
 import { Redirect } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../AuthContext";
+import Match from "../components/Match";
 import axios from "axios";
 
 const Profile = ({ history }) => {
@@ -25,6 +26,9 @@ const Profile = ({ history }) => {
       <div>
         <h1>Hello You made it!</h1>
         <UpdateProfile></UpdateProfile>
+      </div>
+      <div>
+<Match></Match>
       </div>
 
       <button
