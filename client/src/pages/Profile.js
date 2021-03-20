@@ -6,7 +6,7 @@
 
 import React from "react";
 
-
+import UpdateProfile from "../components/UpdateProfile"
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../AuthContext";
 import axios from "axios";
@@ -19,10 +19,12 @@ const Profile = ({ history }) => {
       console.log(res.data);
     });
   }, []);
-  // console.log(currentUser);
+  console.log(currentUser);
   return (
     <>
-      <NavBar /> 
+      <NavBar />
+        <UpdateProfile></UpdateProfile>
+      
     </>
   );
 };

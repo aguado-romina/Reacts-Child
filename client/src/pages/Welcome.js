@@ -1,6 +1,8 @@
 // the landing page
 import React from "react";
 import { Link } from "react-router-dom";
+import List from "../components/List";
+
 
 function Welcome() {
   return (
@@ -19,13 +21,11 @@ function Welcome() {
 
           </p>
         </div>
-        <div>
+        <div className="grid grid-cols-6">
             <button
               type="submit"
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm text-white font-medium rounded-md bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                      <span className="absolute left-0 inset-y-0 flex items-center pl-3">
-             
-             </span>
+              className="group relative flex justify-center py-2 px-4 border border-transparent text-sm text-white font-medium rounded-md bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                      
             <Link
               to="/signup"
               className={
@@ -34,19 +34,17 @@ function Welcome() {
             </button>
             <button
              type="submit"
-             className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm text-white font-medium rounded-md bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                     <span className="absolute left-0 inset-y-0 flex items-center pl-3">
-            
-            </span>
+             className="group relative flex justify-center py-2 px-4 border border-transparent text-sm text-white font-medium rounded-md bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                     
             <Link
               to="/login"
               className={
                 window.location.pathname === "/" || window.location.pathname === "/login"}
             >Login</Link>
             </button>
-
         </div>
       </main>
+      
     </div>
   );
 }

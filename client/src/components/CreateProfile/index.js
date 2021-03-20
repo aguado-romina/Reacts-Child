@@ -3,7 +3,6 @@ import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_PROFILE, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
 import SignUpImg from "../UploadImages/SignUpImg/index";
-import {Link} from "react-router-dom";
 import { AuthContext } from "../../AuthContext";
 
 function CreateProfile() {
