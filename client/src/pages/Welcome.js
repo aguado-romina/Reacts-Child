@@ -3,11 +3,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import List from "../components/List";
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 2c6678ac3263c6cb7096241629cfa783657d9fee
 function Welcome() {
   return (
     <div className="relative bg-white overflow-hidden">
@@ -34,11 +29,6 @@ function Welcome() {
       
             <button
               type="submit"
-<<<<<<< HEAD
-              className="group relative flex justify-center py-2 px-4 border border-transparent text-sm text-white font-medium rounded-md bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-            >
-              Sign Up
-=======
               className="group relative flex justify-center py-2 px-4 border border-transparent text-sm text-white font-medium rounded-md bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                       
             <Link
@@ -55,7 +45,6 @@ function Welcome() {
               // className={
               //   window.location.pathname === "/" || window.location.pathname === "/login"}
             >Login</Link>
->>>>>>> 2c6678ac3263c6cb7096241629cfa783657d9fee
             </button>
            
           </Link>
