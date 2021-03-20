@@ -29,8 +29,7 @@ function Welcome() {
                       
             <Link
               to="/signup"
-              className={
-                window.location.pathname === "/" || window.location.pathname === "/signup"}
+              // className={window.location.pathname === "/" || window.location.pathname === "/signup"}
             >Sign Up</Link>
             </button>
             <button
@@ -39,8 +38,8 @@ function Welcome() {
                      
             <Link
               to="/login"
-              className={
-                window.location.pathname === "/" || window.location.pathname === "/login"}
+              // className={
+              //   window.location.pathname === "/" || window.location.pathname === "/login"}
             >Login</Link>
             </button>
         </div>
