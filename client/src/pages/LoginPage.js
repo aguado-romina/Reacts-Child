@@ -5,7 +5,10 @@ import "tailwindcss/tailwind.css"
 
 function LoginPage () {
     return (
+        <div className="container bg-white px-8 mx-auto rounded-lg">
         <Login></Login>
+
+        </div>
     )
 }
 export default LoginPage;
