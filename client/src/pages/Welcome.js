@@ -3,9 +3,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 //import List from "../components/List";
 
-
 function Welcome() {
   return (
+
    
     <div className="container bg-white  px-8 mx-auto rounded-lg">
       
@@ -25,22 +25,26 @@ function Welcome() {
 
            
           <div className="flex justify-center">
+
           <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
             A letter written from a dog to their human.
-
           </p>
+
           </div>
         
         <div className="flex flex-wrap justify-center">
         
+
             <button
               type="submit"
               className="group relative flex justify-center py-2 px-4 border border-transparent text-sm text-white font-medium rounded-md bg-lightblue hover:bg-darkblue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightblue ">
                       
             <Link
+
                to="/signup"
               // className={
               //   window.location.pathname === "/" || window.location.pathname === "/signup"}
+
             >Sign Up</Link>
             </button>
             <button
@@ -53,9 +57,29 @@ function Welcome() {
               //   window.location.pathname === "/" || window.location.pathname === "/login"}
             >Login</Link>
             </button>
+           
+          </Link>
+        
+          <Link
+            to="/login"
+            className={
+              window.location.pathname === "/" ||
+              window.location.pathname === "/login"
+            }
+          >
+            
+          <button
+            type="submit"
+            className="group relative flex justify-center py-2 px-4 border border-transparent text-sm text-white font-medium rounded-md bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          >
+            Login
+          </button>
+          
+        </Link>
+
         </div>
+       
       </main>
-      
     </div>
   );
 }
