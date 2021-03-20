@@ -1,4 +1,7 @@
 import React from "react";
+import CardBtn from "../CardBtn";
+
+
 import "./style.css";
 
 function Card(props) {
@@ -35,6 +38,15 @@ function Card(props) {
               {/* <span className="text-sm text-gray-600">(based on 234 ratings)</span> */}
             </div>
           </div>
+          <CardBtn
+        onClick={props.handleBtnClick}
+        data-value="pass"
+      />
+      <CardBtn
+        onClick={props.handleBtnClick}
+        data-value="pick"
+      />
+
         </div>
       </div>
     </div>
