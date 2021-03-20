@@ -89,7 +89,7 @@ function UpdateProfile() {
                           type="text"
                           name="puppy_parent"
                           id="puppy_parent"
-                          autocomplete="given-name"
+                          autoComplete="given-name"
                           className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                         />
                       </div>
@@ -106,7 +106,7 @@ function UpdateProfile() {
                           type="text"
                           name="puppy_name"
                           id="puppy_name"
-                          autocomplete="puppy-name"
+                          autoComplete="puppy-name"
                           className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                         />
                       </div>
@@ -122,7 +122,7 @@ function UpdateProfile() {
                           type="text"
                           name="puppy_bio"
                           id="puppy_bio"
-                          autocomplete="puppyBio"
+                          autoComplete="puppyBio"
                           className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                         />
                       </div>
@@ -138,7 +138,7 @@ function UpdateProfile() {
                           type="text"
                           name="puppy_breed"
                           id="puppy_breed"
-                          autocomplete="breed"
+                          autoComplete="breed"
                           className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                         />
                       </div>
@@ -154,7 +154,7 @@ function UpdateProfile() {
                           type="text"
                           name="puppy_age"
                           id="puppy_age"
-                          autocomplete="age"
+                          autoComplete="age"
                           className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                         />
                       </div>
