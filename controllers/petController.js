@@ -7,7 +7,7 @@ module.exports = {
       .catch((err) => res.status(422).json(err));
   },
   findById: function (req, res) {
-    db.Puppy.findById({ _id: req.params.id })
+    db.Puppy.findOne({ currentUser: req.params.id })
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
@@ -17,7 +17,7 @@ module.exports = {
       .catch((err) => res.status(422).json(err));
   },
   update: function (req, res) {
-    db.Puppy.findByIdAndUpdate({_id: req.params.id }, req.body)
+    db.Puppy.findByIdAndUpdate({currentUser: req.params.id }, req.body)
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
