@@ -39,16 +39,8 @@ function Welcome() {
             <Link
 
                to="/signup"
-              // className={
-              //   window.location.pathname === "/" || window.location.pathname === "/signup"}
-
-              to="/signup"
-              // className={window.location.pathname === "/" || window.location.pathname === "/signup"}
-
-
-               to="/signup"
-              // className={
-              //   window.location.pathname === "/" || window.location.pathname === "/signup"}
+              className={
+                window.location.pathname === "/" || window.location.pathname === "/signup"}
 
 
             >Sign Up</Link>

@@ -2,8 +2,8 @@ import React, { useRef, useContext } from "react";
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_PROFILE, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
-import SignUpImg from "../UploadImages/SignUpImg/index";
 import { AuthContext } from "../../AuthContext";
+import { Link } from "react-router-dom";
 
 function CreateProfile() {
   const { currentUser } = useContext(AuthContext);
@@ -66,7 +66,6 @@ function CreateProfile() {
             <form action="#" method="POST">
               <div className="shadow overflow-hidden sm:rounded-md">
                 <div className="px-4 py-5 bg-white sm:p-6">
-                <SignUpImg></SignUpImg>
                   <div className="grid grid-cols-6 gap-6">
                     <div className="col-span-6 sm:col-span-3">
                       <label
@@ -153,15 +152,21 @@ function CreateProfile() {
                   </div>
                 </div>
                 <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
-            
+           
                   <button
                     type="submit"
                     className="group relative flex justify-center py-2 px-4 border border-transparent text-sm text-white font-medium rounded-md bg-lightblue hover:bg-darkblue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightblue"
-            
+                     
                     onClick={handleSubmit}
                     disabled={state.loading}
+                  >       <Link  to="/swipe"
+                  className={
+                    window.location.pathname === "/createprofile" ||
+                    window.location.pathname === "/swipe" 
+                  }
                   >
                     Create Profile
+                    </Link>
                   </button>
                  
                 </div>
