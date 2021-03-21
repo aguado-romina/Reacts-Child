@@ -67,8 +67,8 @@ const NavBar = ({ history }) => {
                   </div>
                 </Link>
                 <Link
-                  to="/matches"
-                  className={window.location.pathname === "/matches"}
+                  to="/profile"
+                  className={window.location.pathname === "/profile"}
                 >
                   <div className="text-black hover:bg-orangelight hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Profile
@@ -99,12 +99,12 @@ const NavBar = ({ history }) => {
                   className={window.location.pathname === "/matches"}
                 >
                   <div className="text-black hover:bg-yellowlight hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                    You Matches
+                    Your Matches
                   </div>
                 </Link>
                 <Link
-                  to="/matches"
-                  className={window.location.pathname === "/matches"}
+                  to="/profile"
+                  className={window.location.pathname === "/profile"}
                 >
                   <div className="text-black hover:bg-darkblue hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Profile
