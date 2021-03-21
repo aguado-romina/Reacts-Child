@@ -22,17 +22,17 @@ const [password, setPassword] = useState();
     }
   }, [history, email, password]);
   return (
-    <div className="max-w-md container bg-white px-10 mx-auto rounded-lg flex justify-center">
+    <div className="max-w-md container bg-white px-10 mx-auto rounded-lg flex justify-center lg:px-4  md:mt-10">
       
     
-      <div className=" max-w-md w-full space-y-8">
+      <div className=" max-w-md w-full space-y-8 sm:px-3 px-4 py-4">
         <div>
-          <h2 className="flex justify-center mt-6 text-3xl font-extrabold text-gray-900">
+          <h2 className="flex justify-center mt-3 text-3xl font-extrabold text-black">
             Sign up for an account
           </h2>
         
         </div>
-        <form onSubmit={handleSignUp} className=" mt-8 space-y-6">
+        <form onSubmit={handleSignUp} className=" mt-12 space-y-5">
           <input type="hidden" name="remember" value="true" />
           <div className="rounded-md shadow-sm -space-y-px">
             <div>
