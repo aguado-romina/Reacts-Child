@@ -11,8 +11,10 @@ export default {
     return axios.get("/api/profiles");
   },
   
-  getProfile: function(id) {
-    return axios.get("/api/profiles/" + id);
+  getProfile: function(id, updateObject) {
+    console.log("CREATE PROFILE IS IN ", id, updateObject);
+
+    return axios.get("/api/profiles/" + id, updateObject);
   },
   
   updateProfiles: function(id, updateObject) {
@@ -25,8 +27,8 @@ export default {
     return axios.delete("/api/profiles/" + id);
   },
 
-  saveProfile: function(postData) {
-    console.log("ID PASSED IN ", postData);
-    return axios.post("/api/profiles", postData);
+  saveProfile: function(updateObject) {
+    console.log("ID PASSED IN ", updateObject);
+    return axios.post("/api/profiles", updateObject);
   }
 };

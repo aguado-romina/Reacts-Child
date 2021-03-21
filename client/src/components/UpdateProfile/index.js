@@ -1,6 +1,6 @@
 import React, { useRef, useState, useContext } from "react";
 import { useStoreContext } from "../../utils/GlobalState";
-import { UPDATE_PROFILES, LOADING } from "../../utils/actions";
+import { LOADING } from "../../utils/actions";
 import API from "../../utils/API";
 import SignUpImg from "../UploadImages/SignUpImg/index";
 import Modal from "react-modal";
