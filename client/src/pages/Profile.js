@@ -1,7 +1,5 @@
 
 import React from "react";
-
-import UpdateProfile from "../components/UpdateProfile"
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../AuthContext";
 import Match from "../components/Match";
@@ -23,8 +21,7 @@ const Profile = ({ history }) => {
       
     
     <NavBar />
-    <UpdateProfile></UpdateProfile>
-    <ProfileCard></ProfileCard>
+    <ProfileCard currentUser={currentUser.uid}></ProfileCard>
 
 </div>
 

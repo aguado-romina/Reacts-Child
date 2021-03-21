@@ -29,7 +29,6 @@ function UpdateProfile() {
     }
     // {
 
-    // }
     console.log("The things:", updateObject);
     API.updateProfiles(id, updateObject)
       .then((result) => {

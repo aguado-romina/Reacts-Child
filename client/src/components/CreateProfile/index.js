@@ -17,14 +17,16 @@ function CreateProfile() {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch({ type: LOADING });
-    API.saveProfile({
-      currentUser: currentUser.uid,
+    let id = currentUser.uid;
+    const updateObject = {
       puppyParent: ParentRef.current.value,
       puppyName: NameRef.current.value,
       bio: bioRef.current.value,
       breed: breedRef.current.value,
       age: ageRef.current.value,
-    })
+    }
+    console.log("The things:", updateObject);
+    API.saveProfile(id, updateObject)
       .then((result) => {
         dispatch({
           type: ADD_PROFILE,

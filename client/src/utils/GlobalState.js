@@ -84,12 +84,12 @@ const StoreProvider = ({ value = [], ...props }) => {
     profiles: [],
     currentProfile: {
       _id: 0,
-      puppyParent: "",
-      puppyName: "",
-      puppyImage: "",
-      bio: "",
-      breed: "",
-      age: ""
+      // puppyParent: "",
+      // puppyName: "",
+      // puppyImage: "",
+      // bio: "",
+      // breed: "",
+      // age: ""
       
     },
     matches: [],

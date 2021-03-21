@@ -11,8 +11,10 @@ export default {
     return axios.get("/api/profiles");
   },
   
-  getProfile: function(id) {
-    return axios.get("/api/profiles/" + id);
+  getProfile: function(id, updateObject) {
+    console.log("ID PASSED IN ", id, updateObject);
+    return axios.get("/api/profiles/" + id, updateObject);
+
   },
   
   updateProfiles: function(id, updateObject) {
