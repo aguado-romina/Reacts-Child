@@ -7,20 +7,20 @@ function Welcome() {
   return (
 
    
-    <div className="container bg-white px-8 mx-auto rounded-lg">
+    <div className="object-contain md:container  bg-white px-2 mx-auto rounded-md  ">
       
     
 
       <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-6 xl:mt-28">
      
-              <div className=" sm:text-center lg:text-center">
-              <img src="https://github.com/aguado-romina/Reacts-Child/blob/roxie/client/src/images/welcome.png?raw=true" alt="logo" className="" />
- </div>
+      <section class="flex justify-center">
+              <img src="https://github.com/aguado-romina/Reacts-Child/blob/roxie/client/src/images/welcome.png?raw=true"  width="500" with ="500" alt="logo" className="" />
+        
+  </section>
 
-              <div className="sm:text-center lg:text-center">
-  
-    <img src="https://github.com/aguado-romina/Reacts-Child/blob/roxie/client/src/images/puppy.gif?raw=true" alt="frenchie" className="object-center" />
-  </div>
+  <section class="flex justify-center">
+    <img src="https://github.com/aguado-romina/Reacts-Child/blob/roxie/client/src/images/puppy.gif?raw=true" alt="frenchie" width="500" with ="500" className="object-center" />
+ </section>
 
 
            

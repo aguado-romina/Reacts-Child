@@ -63,7 +63,7 @@ const NavBar = ({ history }) => {
                   className={window.location.pathname === "/matches"}
                 >
                   <div className="text-black hover:bg-darkblue hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                    You Matches
+                    Matches
                   </div>
                 </Link>
                 <Link
@@ -99,7 +99,7 @@ const NavBar = ({ history }) => {
                   className={window.location.pathname === "/matches"}
                 >
                   <div className="text-black hover:bg-yellowlight hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                    You Matches
+                    Matches
                   </div>
                 </Link>
                 <Link
