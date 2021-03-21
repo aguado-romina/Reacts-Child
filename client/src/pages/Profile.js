@@ -25,7 +25,6 @@ const Profile = ({ history }) => {
     <NavBar />
     <UpdateProfile></UpdateProfile>
     <ProfileCard></ProfileCard>
-    <Match></Match>
 
 </div>
 
