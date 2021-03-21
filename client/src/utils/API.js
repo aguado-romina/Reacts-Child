@@ -13,6 +13,7 @@ export default {
   
   getProfile: function(id) {
     return axios.get("/api/profiles/" + id);
+
   },
   
   updateProfiles: function(id, updateObject) {
