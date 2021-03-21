@@ -4,6 +4,8 @@ import { ADD_PROFILE, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
 import { AuthContext } from "../../AuthContext";
 import { Link } from "react-router-dom";
+import { Image } from "cloudinary-react";
+import Allcompailed from "../UploadImages/Allcompailed";
 
 function CreateProfile() {
   const { currentUser } = useContext(AuthContext);
@@ -41,6 +43,7 @@ function CreateProfile() {
   };
 
   return (
+
    
     
         
@@ -49,6 +52,7 @@ function CreateProfile() {
     
 
     
+
       <div className="hidden sm:block" aria-hidden="true">
         <div className="py-5">
           <div className="border-t border-white"></div>
@@ -65,6 +69,9 @@ function CreateProfile() {
                 Make a Profile So You Can Start Matching.
               </p>
             </div>
+          </div>
+          <div>
+            <Allcompailed />
           </div>
           <div className="mt-5 md:mt-0 md:col-span-2">
             <form action="#" method="POST">
@@ -155,24 +162,26 @@ function CreateProfile() {
                     </div>
                   </div>
                 </div>
+
                 <div className="px-4 py-4 bg-white text-right sm:px-5">
-           
+
                   <button
                     type="submit"
                     className="group relative flex justify-center py-2 px-4 border border-transparent text-sm text-white font-medium rounded-md bg-lightblue hover:bg-darkblue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightblue"
-                     
                     onClick={handleSubmit}
                     disabled={state.loading}
-                  >       <Link  to="/swipe"
-                  className={
-                    window.location.pathname === "/createprofile" ||
-                    window.location.pathname === "/swipe" 
-                  }
                   >
-                    Create Profile
+                    {" "}
+                    <Link
+                      to="/swipe"
+                      className={
+                        window.location.pathname === "/createprofile" ||
+                        window.location.pathname === "/swipe"
+                      }
+                    >
+                      Create Profile
                     </Link>
                   </button>
-                 
                 </div>
               </div>
             </form>
