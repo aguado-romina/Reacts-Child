@@ -32,26 +32,28 @@
     "@craco/craco": "^6.1.1",
     "axios": "^0.21.1",
     "babel-eslint": "^10.1.0",
+    "cloudinary": "^1.25.0",
+    "decamelize": "^5.0.0",
     "dotenv": "^8.2.0",
     "eslint": "^7.21.0",
     "eslint-config-prettier": "^8.1.0",
     "express": "^4.16.3",
+    "find-up": "^5.0.0",
     "firebase": "^8.2.10",
     "if-env": "^1.0.4",
+    "json-parse-better-errors": "^1.0.2",
     "mongoose": "^5.12.0",
     "prettier": "^2.2.1",
     "react-firebaseui": "^4.1.0",
     "react-modal": "^3.12.1",
-    "react-router-dom": "^5.2.0"
+    "react-notify-toast": "^0.5.1",
+    "react-router-dom": "^5.2.0",
+    "set-blocking": "^2.0.0"
   },
   "devDependencies": {
-    "@tailwindcss/postcss7-compat": "^2.0.4",
-    "autoprefixer": "^9.8.6",
     "concurrently": "^6.0.0",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.22.0",
-    "nodemon": "^1.18.7",
-    "postcss": "^7.0.35",
-    "tailwindcss": "^2.0.4"
+    "nodemon": "^1.18.7"
   }
 }

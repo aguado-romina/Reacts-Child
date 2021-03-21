@@ -1,132 +1,130 @@
 import React, { Component } from "react";
-import Notifications, { notify } from "react-notify-toast";
-import Spinner from "./Spinner";
-import Images from "./Images";
-import Buttons from "./Buttons";
-import WakeUp from "./WakeUp";
-import Footer from "./Footer";
-import { API_URL } from "./config";
-import "./App.css";
+// import Notifications, { notify } from "react-notify-toast";
+// import Spinner from "./Spinner";
+// import Images from "./Images";
+// import Buttons from "./Buttons";
+// import { API_URL } from "../../config";
 
-const toastColor = {
-  background: "#505050",
-  text: "#fff",
-};
 
-export default class App extends Component {
-  state = {
-    loading: true,
-    uploading: false,
-    images: [],
-  };
+// const toastColor = {
+//   background: "#505050",
+//   text: "#fff",
+// };
 
-  componentDidMount() {
-    fetch(`${API_URL}/wake-up`).then((res) => {
-      if (res.ok) {
-        return this.setState({ loading: false });
-      }
-      const msg = "Something is went wrong with Heroku";
-      this.toast(msg, "custom", 2000, toastColor);
-    });
-  }
+// export default class Allcompailed extends Component {
+//   state = {
+//     loading: true,
+//     uploading: false,
+//     images: [],
+//   };
 
-  toast = notify.createShowQueue();
+//   componentDidMount() {
+//     fetch(`${API_URL}/wake-up`).then((res) => {
+//       if (res.ok) {
+//         return this.setState({ loading: false });
+//       }
+//       const msg = "Something is went wrong with Heroku";
+//       this.toast(msg, "custom", 2000, toastColor);
+//     });
+//   }
 
-  onChange = (e) => {
-    const errs = [];
-    const files = Array.from(e.target.files);
+//   toast = notify.createShowQueue();
 
-    if (files.length > 3) {
-      const msg = "Only 3 images can be uploaded at a time";
-      return this.toast(msg, "custom", 2000, toastColor);
-    }
+//   onChange = (e) => {
+//     const errs = [];
+//     const files = Array.from(e.target.files);
 
-    const formData = new FormData();
-    const types = ["image/png", "image/jpeg", "image/gif"];
+//     if (files.length > 3) {
+//       const msg = "Only 3 images can be uploaded at a time";
+//       return this.toast(msg, "custom", 2000, toastColor);
+//     }
 
-    files.forEach((file, i) => {
-      if (types.every((type) => file.type !== type)) {
-        errs.push(`'${file.type}' is not a supported format`);
-      }
+//     const formData = new FormData();
+//     const types = ["image/png", "image/jpeg", "image/gif"];
 
-      if (file.size > 150000) {
-        errs.push(`'${file.name}' is too large, please pick a smaller file`);
-      }
+//     files.forEach((file, i) => {
+//       if (types.every((type) => file.type !== type)) {
+//         errs.push(`'${file.type}' is not a supported format`);
+//       }
 
-      formData.append(i, file);
-    });
+//       if (file.size > 150000) {
+//         errs.push(`'${file.name}' is too large, please pick a smaller file`);
+//       }
 
-    if (errs.length) {
-      return errs.forEach((err) => this.toast(err, "custom", 2000, toastColor));
-    }
+//       formData.append(i, file);
+//     });
 
-    this.setState({ uploading: true });
+//     if (errs.length) {
+//       return errs.forEach((err) => this.toast(err, "custom", 2000, toastColor));
+//     }
 
-    fetch(`${API_URL}/image-upload`, {
-      method: "POST",
-      body: formData,
-    })
-      .then((res) => {
-        if (!res.ok) {
-          throw res;
-        }
-        return res.json();
-      })
-      .then((images) => {
-        this.setState({
-          uploading: false,
-          images,
-        });
-      })
-      .catch((err) => {
-        err.json().then((e) => {
-          this.toast(e.message, "custom", 2000, toastColor);
-          this.setState({ uploading: false });
-        });
-      });
-  };
+//     this.setState({ uploading: true });
 
-  filter = (id) => {
-    return this.state.images.filter((image) => image.public_id !== id);
-  };
+//     fetch(`${API_URL}/image-upload`, {
+//       method: "POST",
+//       body: formData,
+//     })
+//       .then((res) => {
+//         if (!res.ok) {
+//           throw res;
+//         }
+//         return res.json();
+//       })
+//       .then((images) => {
+//         this.setState({
+//           uploading: false,
+//           images,
+//         });
+//       })
+//       .catch((err) => {
+//         err.json().then((e) => {
+//           this.toast(e.message, "custom", 2000, toastColor);
+//           this.setState({ uploading: false });
+//         });
+//       });
+//   };
 
-  removeImage = (id) => {
-    this.setState({ images: this.filter(id) });
-  };
+//   filter = (id) => {
+//     return this.state.images.filter((image) => image.public_id !== id);
+//   };
 
-  onError = (id) => {
-    this.toast("Oops, something went wrong", "custom", 2000, toastColor);
-    this.setState({ images: this.filter(id) });
-  };
+//   removeImage = (id) => {
+//     this.setState({ images: this.filter(id) });
+//   };
 
-  render() {
-    const { loading, uploading, images } = this.state;
+//   onError = (id) => {
+//     this.toast("Oops, something went wrong", "custom", 2000, toastColor);
+//     this.setState({ images: this.filter(id) });
+//   };
 
-    const content = () => {
-      switch (true) {
-        case loading:
-          return <WakeUp />;
-        case uploading:
-          return <Spinner />;
-        case images.length > 0:
-          return (
-            <Images
-              images={images}
-              removeImage={this.removeImage}
-              onError={this.onError}
-            />
-          );
-        default:
-          return <Buttons onChange={this.onChange} />;
-      }
-    };
+//   render() {
+//     const { loading, uploading, images } = this.state;
 
-    return (
-      <div className="container">
-        <Notifications />
-        <div className="buttons">{content()}</div>
-        <Footer />
-      </div>
-    );
-  }
-}
+//     const content = () => {
+//       switch (true) {
+//         case loading:
+//           return <WakeUp />;
+//         case uploading:
+//           return <Spinner />;
+//         case images.length > 0:
+//           return (
+//             <Images
+//               images={images}
+//               removeImage={this.removeImage}
+//               onError={this.onError}
+//             />
+//           );
+//         default:
+//           return <Buttons onChange={this.onChange} />;
+//       }
+//     };
+
+//     return (
+//       <div className="container">
+//         <Notifications />
+//         <div className="buttons">{content()}</div>
+//         <Footer />
+//       </div>
+//     );
+//   }
+// }

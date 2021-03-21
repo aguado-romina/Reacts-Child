@@ -4,11 +4,13 @@ import Welcome from "./pages/Welcome";
 import CreateProfileForm from "./pages/CreateProfileForm";
 import Signup from "./pages/Signup";
 import LoginPage from "./pages/LoginPage";
+import UserSwipe from "./pages/UserSwipe";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import { StoreProvider } from "./utils/GlobalState";
 import Profile from "./pages/Profile";
 import { AuthProvider } from "./AuthContext";
+import Matches from "./pages/Matches";
 
 function App() {
   return (
@@ -26,7 +28,9 @@ function App() {
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/createprofile" component={CreateProfileForm} />
             <Route exact path="/profile" component={Profile} />
+            <Route exact path="/swipe" component={UserSwipe} />
             <Route exact path="/profiles/:id" component={Detail} />
+            <Route exact path="/matches" component={Matches} />
             <Route component={NoMatch} />
           </Switch>
         </StoreProvider>
