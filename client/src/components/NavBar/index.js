@@ -13,8 +13,8 @@ const NavBar = ({ history }) => {
 
     
     <nav className="bg-white h-auto">
-      <div className="max-w-7xl h-0 mx-auto px-2 sm:px-6 sm:px-8 p-1">
-        <div className="relative flex items-center justify-left h-16">
+      <div className="max-w-7xl h-0 mx-auto px-2 sm:px-2 sm:px-3 p-4">
+        <div className="relative flex items-center justify-left h-4">
           <div className="absolute inset-y-0 left-0 flex items-center">
             <button
               onClick={handleClick}
