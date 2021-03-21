@@ -1,7 +1,6 @@
-
 import React from "react";
 
-import UpdateProfile from "../components/UpdateProfile"
+import UpdateProfile from "../components/UpdateProfile";
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../AuthContext";
 import Match from "../components/Match";
@@ -19,16 +18,13 @@ const Profile = ({ history }) => {
   console.log(currentUser);
   return (
     <>
-    <NavBar />
-    <UpdateProfile></UpdateProfile>
-    <ProfileCard></ProfileCard>
-    <Match></Match>
+      <NavBar />
+      <ProfileCard></ProfileCard>
+      <UpdateProfile></UpdateProfile>
 
-
-
+      <Match></Match>
     </>
   );
 };
 
 export default Profile;
-

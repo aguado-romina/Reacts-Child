@@ -16,6 +16,7 @@ function CreateProfile() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+   
     dispatch({ type: LOADING });
     API.saveProfile({
       currentUser: currentUser.uid,
