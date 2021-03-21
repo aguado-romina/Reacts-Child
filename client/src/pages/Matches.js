@@ -1,8 +1,9 @@
 // users can view their matches 
 
 // message their matches from this page
-import React, {useState, useEffect} from 'react'
-import MatchResults from '../components/MatchResults'
+import React, {useState} from 'react'
+import NavBar from "../components/NavBar";
+import Puppy from "../components/List"
 
 const Matches = () => {
 
@@ -16,9 +17,10 @@ const Matches = () => {
 
     return (
         <>
-            <h2>Matches: {count}</h2>
-            <button onClick={upItGoes}>Go Up</button>
-            <MatchResults count={count}/>
+        <NavBar/>
+        <div className="max-w-auto container bg-white px-8 mx-auto rounded-lg">
+       <Puppy/>
+        </div>
         </>
     )
 }

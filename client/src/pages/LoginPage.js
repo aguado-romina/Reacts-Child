@@ -4,7 +4,10 @@ import Login from "../components/Login";
 
 function LoginPage () {
     return (
-        <div className="container bg-white px-8 mx-auto rounded-lg">
+        
+    <div className="max-w-auto container bg-white px-8 mx-auto rounded-lg">
+      
+    
         <Login></Login>
 
         </div>

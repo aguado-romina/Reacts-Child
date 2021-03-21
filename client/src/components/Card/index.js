@@ -46,7 +46,9 @@ function Card(props) {
         onClick={props.handleBtnClick}
         data-value="pick"
       />
-
+ <span onClick={() => props.removePuppy(props.id)} className="remove">
+        𝘅
+      </span>
         </div>
       </div>
     </div>

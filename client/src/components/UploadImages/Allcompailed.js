@@ -1,132 +1,92 @@
-import React, { Component } from "react";
-import Notifications, { notify } from "react-notify-toast";
-import Spinner from "./Spinner";
-import Images from "./Images";
-import Buttons from "./Buttons";
-import WakeUp from "./WakeUp";
-import Footer from "./Footer";
-import { API_URL } from "./config";
-import "./App.css";
+import React from "react";
 
-const toastColor = {
-  background: "#505050",
-  text: "#fff",
-};
-
-export default class App extends Component {
+class Allcompailed extends React.Component {
   state = {
-    loading: true,
-    uploading: false,
-    images: [],
+    imageUrl: undefined,
+    imageAlt: undefined,
   };
 
-  componentDidMount() {
-    fetch(`${API_URL}/wake-up`).then((res) => {
-      if (res.ok) {
-        return this.setState({ loading: false });
-      }
-      const msg = "Something is went wrong with Heroku";
-      this.toast(msg, "custom", 2000, toastColor);
-    });
-  }
-
-  toast = notify.createShowQueue();
-
-  onChange = (e) => {
-    const errs = [];
-    const files = Array.from(e.target.files);
-
-    if (files.length > 3) {
-      const msg = "Only 3 images can be uploaded at a time";
-      return this.toast(msg, "custom", 2000, toastColor);
-    }
+  handleImageUpload = () => {
+    const { files } = document.querySelector('input[type="file"]');
 
     const formData = new FormData();
-    const types = ["image/png", "image/jpeg", "image/gif"];
+    formData.append("file", files[0]);
+    formData.append("upload_preset", "ybbx9cx4");
 
-    files.forEach((file, i) => {
-      if (types.every((type) => file.type !== type)) {
-        errs.push(`'${file.type}' is not a supported format`);
-      }
-
-      if (file.size > 150000) {
-        errs.push(`'${file.name}' is too large, please pick a smaller file`);
-      }
-
-      formData.append(i, file);
-    });
-
-    if (errs.length) {
-      return errs.forEach((err) => this.toast(err, "custom", 2000, toastColor));
-    }
-
-    this.setState({ uploading: true });
-
-    fetch(`${API_URL}/image-upload`, {
+    const options = {
       method: "POST",
       body: formData,
-    })
+    };
+
+    return fetch(
+      "https://api.cloudinary.com/v1_1/reactschild/image/upload",
+      options
+    )
+      .then((res) => res.json())
       .then((res) => {
-        if (!res.ok) {
-          throw res;
-        }
-        return res.json();
-      })
-      .then((images) => {
         this.setState({
-          uploading: false,
-          images,
+          imageUrl: res.secure_url,
+          imageAlt: `An image of ${res.original_filename}`,
         });
       })
-      .catch((err) => {
-        err.json().then((e) => {
-          this.toast(e.message, "custom", 2000, toastColor);
-          this.setState({ uploading: false });
-        });
-      });
+      .catch((err) => console.log(err));
   };
 
-  filter = (id) => {
-    return this.state.images.filter((image) => image.public_id !== id);
-  };
-
-  removeImage = (id) => {
-    this.setState({ images: this.filter(id) });
-  };
-
-  onError = (id) => {
-    this.toast("Oops, something went wrong", "custom", 2000, toastColor);
-    this.setState({ images: this.filter(id) });
+  openWidget = () => {
+    window.cloudinary
+      .createUploadWidget(
+        {
+          cloudName: "reactschild",
+          uploadPreset: "ybbx9cx4",
+        },
+        (error, { event, info }) => {
+          if (event === "success") {
+            this.setState({
+              imageUrl: info.secure_url,
+              imageAlt: `An image of ${info.original_filename}`,
+            });
+          }
+        }
+      )
+      .open();
   };
 
   render() {
-    const { loading, uploading, images } = this.state;
-
-    const content = () => {
-      switch (true) {
-        case loading:
-          return <WakeUp />;
-        case uploading:
-          return <Spinner />;
-        case images.length > 0:
-          return (
-            <Images
-              images={images}
-              removeImage={this.removeImage}
-              onError={this.onError}
-            />
-          );
-        default:
-          return <Buttons onChange={this.onChange} />;
-      }
-    };
+    const { imageUrl, imageAlt } = this.state;
 
     return (
-      <div className="container">
-        <Notifications />
-        <div className="buttons">{content()}</div>
-        <Footer />
-      </div>
+      <main className="Allcompailed">
+        <section className="left-side">
+          <form>
+            <div className="form-group">
+              <input type="file" />
+            </div>
+
+            <button
+              type="button"
+              className="btn"
+              onClick={this.handleImageUpload}
+            >
+              Submit
+            </button>
+            {/* <button
+              type="button"
+              className="btn widget-btn"
+              onClick={this.openWidget}
+            >
+              Upload Via Widget
+            </button> */}
+          </form>
+        </section>
+        <section className="right-side">
+          <p>The resulting image will be displayed here</p>
+          {imageUrl && (
+            <img src={imageUrl} alt={imageAlt} className="displayed-image" />
+          )}
+        </section>
+      </main>
     );
   }
 }
+
+export default Allcompailed;
