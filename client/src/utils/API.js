@@ -26,6 +26,7 @@ export default {
   },
 
   saveProfile: function(postData) {
+    console.log("ID PASSED IN ", postData);
     return axios.post("/api/profiles", postData);
   }
 };

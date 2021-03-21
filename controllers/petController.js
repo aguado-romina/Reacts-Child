@@ -7,17 +7,19 @@ module.exports = {
       .catch((err) => res.status(422).json(err));
   },
   findById: function (req, res) {
+    
     db.Puppy.findOne({ currentUser: req.params.id })
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
   create: function (req, res) {
-    db.Puppy.create(req.body)
+    console.log("Got a request1!", req.params.id, req.body);
+    db.Puppy.create( { currentUser: req.params.id } ,req.body)
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
   update: function (req, res) {
-    console.log("Got a request!", req.params.id, req.body);
+    console.log("Got a request2!", req.params.id, req.body);
     db.Puppy.findOneAndUpdate({ currentUser: req.params.id }, req.body)
       .then((dbModel) => res.json(dbModel), console.log("checking"))
       .catch((err) => {
