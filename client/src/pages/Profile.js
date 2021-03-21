@@ -18,15 +18,18 @@ const Profile = ({ history }) => {
   }, []);
   console.log(currentUser);
   return (
-    <>
+    
+    <div className="max-w-auto container bg-white px-8 mx-auto rounded-lg">
+      
+    
     <NavBar />
     <UpdateProfile></UpdateProfile>
     <ProfileCard></ProfileCard>
     <Match></Match>
 
+</div>
 
-
-    </>
+  
   );
 };
 

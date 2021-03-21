@@ -4,7 +4,7 @@ import SignUpForm from "../components/SignUpForm";
 
 function Signup() {
   return (
-    <div className="container bg-white px-8 mx-auto rounded-lg">
+   
       <div style={{ 
         backgroundImage: `url("https://github.com/aguado-romina/Reacts-Child/blob/roxie/client/src/images/background1.png?raw=true")` 
       }}>
@@ -29,7 +29,7 @@ function Signup() {
         </button> */}
 
 </div>
-</div>
+
   );
 }
 export default Signup;

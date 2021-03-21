@@ -5,6 +5,7 @@ import MatchesList from "../components/MatchesList";
 
 const Home = () => {
   return (
+     
     <Container fluid>
       <Row>
         <Col size="md-6">

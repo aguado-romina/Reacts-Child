@@ -4,6 +4,10 @@ import { Col, Row, Container } from "../components/Grid";
 
 const NoMatch = () => {
   return (
+
+    <div className="max-w-auto container bg-white px-8 mx-auto rounded-lg">
+      
+    
     <Container fluid>
       <Row>
         <Col size="md-12">
@@ -18,6 +22,7 @@ const NoMatch = () => {
         </Col>
       </Row>
     </Container>
+    </div>
   );
 };
 
