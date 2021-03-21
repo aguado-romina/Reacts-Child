@@ -4,6 +4,12 @@ Paw's date is an app developed by a group of pet lovers who enjoy making new fri
 Create and account, add a little description about your pet, upload a profile picture and start matching!
 Plus benefit: Great memory for the dog name but never remember the owner's? Use the app to remind yourslef!
 
+## User Story
+
+Is Bingo here! I am a just a regular dog, like to spend time with my human Old McDonald but I miss making new friends, having tug of wars, peeing on trees with other dogs, running with someone who has four legs and last but definitely most important, butt sniffing (Humans apparently don’t do that!).
+
+Paw's Date brings the solution to my issue. My human uses the app to see puppies in the area and after matching with them he can set Paw's Dates!
+
 #### TABLE OF CONTENTS
 
 - [Installation](#Installation)
@@ -11,12 +17,12 @@ Plus benefit: Great memory for the dog name but never remember the owner's? Use 
 - [Credits](#Credits)
 - [Badges](#Credits)
 - [Contributors](#Contributors)
-- [Future.Development](#Future Development)
+- [Future.Development](#Future.Development)
 - [License](#License)
 
 ## Demo
 
-![]()
+![](client/public/screen-by-screen/homePage.png)
 
 ## Installation
 
@@ -36,11 +42,13 @@ https://tranquil-beach-17376.herokuapp.com/
 2. Mongoose database used to house the data
 3. GET and POST routes for retrieving and adding new data used to create the accounts for each user
 4. Cloudinary used to house photos
-5. Deployed app is in Heroku
-6. Oauth authentication is used to authenticate
-7. Travis CI and ESLint are used to scan the quality of the code
-8. Dashboard image credit to []()
-9. Login page image credit to []()
+5. Tailwind used for design
+6. Deployed app is in Heroku
+7. Oauth authentication is used to authenticate
+8. Travis CI and ESLint are used to scan the quality of the code
+9. Scalidraw for screen-by-screen desing
+10. Dashboard image credit to []()
+11. Login page image credit to []()
 
 ## Badges
 

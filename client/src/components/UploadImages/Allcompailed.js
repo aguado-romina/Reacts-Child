@@ -69,13 +69,6 @@ class Allcompailed extends React.Component {
             >
               Submit
             </button>
-            {/* <button
-              type="button"
-              className="btn widget-btn"
-              onClick={this.openWidget}
-            >
-              Upload Via Widget
-            </button> */}
           </form>
         </section>
         <section className="right-side">

@@ -47,11 +47,6 @@ function Welcome() {
               Sign Up
             </Link>
           </button>
-
-         
-
-      
-
           <Link
             to="/login"
             className={
