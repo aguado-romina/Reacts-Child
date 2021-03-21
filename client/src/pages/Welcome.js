@@ -43,7 +43,7 @@ function Welcome() {
               Sign Up
             </Link>
           </button>
-
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <Link
             to="/login"
             className={
