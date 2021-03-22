@@ -5,7 +5,6 @@ import CreateProfileForm from "./pages/CreateProfileForm";
 import Signup from "./pages/Signup";
 import LoginPage from "./pages/LoginPage";
 import UserSwipe from "./pages/UserSwipe";
-import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import { StoreProvider } from "./utils/GlobalState";
 import Profile from "./pages/Profile";
@@ -29,7 +28,6 @@ function App() {
             <Route exact path="/createprofile" component={CreateProfileForm} />
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/swipe" component={UserSwipe} />
-            <Route exact path="/profiles/:id" component={Detail} />
             <Route exact path="/matches" component={Matches} />
             <Route component={NoMatch} />
           </Switch>

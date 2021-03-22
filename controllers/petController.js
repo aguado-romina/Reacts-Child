@@ -7,7 +7,7 @@ module.exports = {
       .catch((err) => res.status(422).json(err));
   },
   findById: function (req, res) {
-    db.Puppy.findOne({ currentUser: req.params.id })
+    db.Puppy.find({ currentUser: req.params.id })
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
