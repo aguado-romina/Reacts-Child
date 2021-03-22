@@ -71,6 +71,7 @@ class Discover extends Component {
             age={age}
             handleBtnClick={this.handleBtnClick}
           />
+          
           <h1 className="text-center">
             Made friends with {this.state.matchCount} pups so far!
           </h1>
