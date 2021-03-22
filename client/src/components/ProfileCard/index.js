@@ -8,7 +8,7 @@ function ProfileCard() {
   const [ data, setData ] = useState(undefined)
 
   useEffect(() => {
-    console.log(`currentUser: ${currentUser.uid}`);
+    // console.log(`currentUser: ${currentUser.uid}`);
     axios.get
       (`/api/profiles/${currentUser.uid}`)
       .then((res) => {
