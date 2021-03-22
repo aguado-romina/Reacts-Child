@@ -20,7 +20,9 @@ class Puppy extends Component {
         
       </div>
         <h1>Matches List</h1>
+        <div className="grid grid-cols-3">
         {this.state.puppies.map((puppy) => (
+          
           <Card
             removePuppy={this.removePuppy}
             id={puppy.id}
@@ -31,6 +33,7 @@ class Puppy extends Component {
             age={puppy.age}
           />
         ))}
+        </div>
       </>
     );
   }

@@ -80,14 +80,17 @@ class Discover extends Component {
             age={age}
             handleBtnClick={this.handleBtnClick}
           />
+
+          
+          <h1 className="text-center">
+            Made friends with {this.state.matchCount} pups so far!
+
           <h1 className="text-center max-w-md w-full space-y-8 sm:px-3 px-4 py-9">
            
            
            
             Made friends with 
              <span className="text-darkblue text-md font-semibold"> {this.state.matchCount}</span> pups so far!
-            
-
 
           </h1>
           {/* <Alert style={{ opacity: this.state.match ? 1 : 0 }} type="success">
