@@ -41,22 +41,19 @@ function UpdateProfile() {
     ageRef.current.value = "";
   };
   return (
-    <div>
+    <div className="font-fonts max-w-auto container bg-white px-8 mx-auto rounded-lg">
+    
       <div className="hidden sm:block" aria-hidden="true">
         <div className="py-5">
-          <div className="border-t border-gray-200"></div>
+          <div className="border-t border-lightblue"></div>
         </div>
       </div>
       <div className="mt-10 sm:mt-0">
         <div className="md:grid md:grid-cols-3 md:gap-6">
           <div className="md:col-span-1">
             <div className="px-4 sm:px-0">
-              <h3 className="text-lg font-medium leading-6 text-gray-900">
-                Profile
-              </h3>
-              <p className="mt-1 text-sm text-gray-600">
-                You Can Update Your Profile here
-              </p>
+          
+             
             </div>
           </div>
           <button onClick={() => setModalIsOpen(true)}>
@@ -73,7 +70,7 @@ function UpdateProfile() {
                       <div className="col-span-6 sm:col-span-3">
                         <label
                           htmlFor="puppy_parent"
-                          className="block text-sm font-medium text-gray-700"
+                          className="block text-sm font-medium text-black"
                         >
                           My Human
                         </label>
@@ -91,7 +88,7 @@ function UpdateProfile() {
                       <div className="col-span-6 sm:col-span-3">
                         <label
                           htmlFor="puppy_name"
-                          className="block text-sm font-medium text-gray-700"
+                          className="block text-sm font-medium text-black"
                         >
                           My Name
                         </label>
@@ -102,13 +99,13 @@ function UpdateProfile() {
                           name="puppy_name"
                           id="puppy_name"
                           autoComplete="puppy-name"
-                          className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                          className="mt-1 focus:ring-lightblue focus:border-lightblue block w-full shadow-sm sm:text-sm border-black rounded-md"
                         />
                       </div>
                       <div className="col-span-6">
                         <label
                           htmlFor="puppy_bio"
-                          className="block text-sm font-medium text-gray-700"
+                          className="block text-sm font-medium text-black"
                         >
                           About Me
                         </label>
@@ -118,13 +115,13 @@ function UpdateProfile() {
                           name="puppy_bio"
                           id="puppy_bio"
                           autoComplete="puppyBio"
-                          className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                          className="mt-1 focus:ring-lightblue focus:border-lightblue block w-full shadow-sm sm:text-sm border-black rounded-md"
                         />
                       </div>
                       <div className="col-span-6 sm:col-span-4">
                         <label
                           htmlFor="puppy_breed"
-                          className="block text-sm font-medium text-gray-700"
+                          className="block text-sm font-medium text-black"
                         >
                           What I am
                         </label>
@@ -134,13 +131,13 @@ function UpdateProfile() {
                           name="puppy_breed"
                           id="puppy_breed"
                           autoComplete="breed"
-                          className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                          className="mt-1 focus:ring-lightblue focus:border-lightblue block w-full shadow-sm sm:text-sm border-black rounded-md"
                         />
                       </div>
                       <div className="col-span-6 sm:col-span-4">
                         <label
                           htmlFor="puppy_age"
-                          className="block text-sm font-medium text-gray-700"
+                          className="block text-sm font-medium text-black"
                         >
                           How Old I Am
                         </label>
@@ -150,15 +147,16 @@ function UpdateProfile() {
                           name="puppy_age"
                           id="puppy_age"
                           autoComplete="age"
-                          className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                          className="mt-1 focus:ring-lightblue focus:border-lightblue block w-full shadow-sm sm:text-sm border-black rounded-md"
                         />
                       </div>
                     </div>
                   </div>
-                  <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
+                  <div className="px-4 py-3 bg-white text-right sm:px-6">
                     <button
                       type="submit"
-                      className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-black bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                      className="group relative font-fonts flex justify-center py-2 px-4 border border-transparent text-sm text-white font-medium rounded-md bg-lightblue hover:bg-darkblue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightblue "
+          
                       onClick={handleSubmit}
                       disabled={state.loading}
                     >
@@ -166,7 +164,7 @@ function UpdateProfile() {
                     </button>
                     <button
                       type="submit"
-                      className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-black bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                      className="inline-flex font-fonts flex justify-center py-2 px-4 border border-transparent text-sm text-white font-medium rounded-md bg-lightblue hover:bg-orangelight focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightblue"
                       disabled={state.loading}
                       onClick={() => setModalIsOpen(false)}
                     >

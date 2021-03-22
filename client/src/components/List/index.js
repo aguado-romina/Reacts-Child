@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import puppies from "../../puppies.json";
-import Card from "../Card";
+import MatchesCard from "../MatchesCard";
 import "./style.css";
 
 class Puppy extends Component {
@@ -19,9 +19,10 @@ class Puppy extends Component {
       <div>
         
       </div>
-        <h1>Matches List</h1>
+        <div className="grid lg:grid-cols-3 sm:grid-cols-1 py-8">
         {this.state.puppies.map((puppy) => (
-          <Card
+          
+          <MatchesCard
             removePuppy={this.removePuppy}
             id={puppy.id}
             human={puppy.human}
@@ -31,6 +32,7 @@ class Puppy extends Component {
             age={puppy.age}
           />
         ))}
+        </div>
       </>
     );
   }
