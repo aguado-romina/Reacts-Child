@@ -19,13 +19,14 @@ const Profile = ({ history }) => {
   console.log(currentUser);
   return (
     
-    <div className="max-w-auto container bg-white px-8 mx-auto rounded-lg">
+    <div className="font-fonts max-w-auto container bg-white px-8 mx-auto rounded-lg">
       
     
     <NavBar />
-    <UpdateProfile></UpdateProfile>
+   
     <ProfileCard></ProfileCard>
-    <Match></Match>
+    <UpdateProfile></UpdateProfile>
+ 
 
 </div>
 

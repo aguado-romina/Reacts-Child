@@ -37,7 +37,10 @@ function MatchesList() {
   }, []);
 
   return (
-    <div>
+    <div className="object-contain md:container  bg-white px-2 mx-10 rounded-md   flex justify-center ">
+      
+    <div className="overflow-auto max-w-md w-full sm:px-auto px-4 py-10">
+      
       <h1>All Profiles</h1>
       <h3 className="mb-5 mt-5">Click on a profile to view</h3>
       {state.profiles.length ? (
@@ -59,6 +62,7 @@ function MatchesList() {
       <div className="mt-5">
         <Link to="favorites">View favorites</Link>
       </div>
+    </div>
     </div>
   );
 }

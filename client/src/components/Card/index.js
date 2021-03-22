@@ -6,7 +6,7 @@ import "./style.css";
 
 function Card(props) {
   return (
-    <div className="wrapper bg-gray-100 antialiased text-gray-400">
+    <div className="wrapper bg-white antialiased text-black">
       <div>
         <img
           src= {props.image}
@@ -16,10 +16,10 @@ function Card(props) {
         <div className="relative px-4 -mt-16  ">
           <div className="bg-white p-6 rounded-lg shadow-lg">
             <div className="flex items-baseline">
-              <span className="bg-teal-200 text-teal-800 text-xs px-2 inline-block rounded-full  uppercase font-semibold tracking-wide">
+              <span className="bg-teal-200 text-orangedark text-xs px-2 inline-block rounded-full  uppercase font-semibold tracking-wide">
                 Woof
               </span>
-              <div className="ml-2 text-gray-600 uppercase text-xs font-semibold tracking-wider">
+              <div className="ml-2 text-lightblue uppercase text-xs font-semibold tracking-wider">
                 {/* 2 baths &bull; 3 rooms */}
                 
               </div>
