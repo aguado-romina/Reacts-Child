@@ -1,10 +1,18 @@
-import React from "react";
-// import API from "../../utils/API";
+import React, { useContext } from "react";
+import API from "../../utils/API";
+import { AuthContext } from "../../AuthContext";
 // import { useStoreContext } from "../../utils/GlobalState";
 // import { SET_CURRENT_PROFILE, ADD_MATCH, REMOVE_MATCH } from "../../utils/actions";
-// import { useEffect } from "react";
 
+
+ 
+ 
 const ProfileCard = (props) => { // can pass in image props from cloudinary
+  const { currentUser } = useContext(AuthContext);
+  API.getProfile(currentUser.uid).then((result) => {
+    console.log(`currentUser: ${currentUser.uid}`);
+    console.log(result);
+  });
 
     return (
         

@@ -9,7 +9,7 @@ router.route("/")
 
 router
   .route("/:id")
-  .get(petsController.findById)
+  .get(petsController.find)
   .put(petsController.update)
   .delete(petsController.remove);
 
