@@ -8,11 +8,13 @@ function MatchesCard(props) {
   return (
     <div className="wrapper bg-white antialiased text-black object-center">
       <div>
-        <img
+        <div>
+        <img className="cardImage img-fluid"
           src= {props.image}
           alt={props.puppy}
           className="w-full object-cover object-center rounded-lg shadow-md"
         />
+        </div>
         <div className="relative px-5 -mt-0  ">
           <div className="bg-white p-10 rounded-lg">
             <div className="flex items-baseline">
