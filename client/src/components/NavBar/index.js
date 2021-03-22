@@ -12,7 +12,7 @@ const NavBar = ({ history }) => {
   return (
 
     
-    <nav className="font-fonts bg-white h-auto">
+    <nav className="font-fonts bg-white h-auto max-w-auto">
       <div className="max-w-7xl h-0 mx-auto px-2 sm:px-2 sm:px-3 p-4">
         <div className="relative flex items-center justify-left h-4">
           <div className="absolute inset-y-0 left-0 flex items-center">
@@ -42,6 +42,9 @@ const NavBar = ({ history }) => {
               </svg>
             </button>
             {/* MOBILE VIEW */}
+            <div >
+                <img src="https://github.com/aguado-romina/Reacts-Child/blob/roxie/client/src/images/welcome.png?raw=true"  width="160" alt="logo" className="object-center" />
+                </div>
             <div className={`lg:flex ${isOpen ? "block" : "hidden"} `}>
               <div
                 className="sm:hidden origin-top-left absolute left-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
