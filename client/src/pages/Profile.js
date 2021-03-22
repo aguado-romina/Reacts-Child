@@ -1,5 +1,4 @@
 import React from "react";
-
 import UpdateProfile from "../components/UpdateProfile";
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../AuthContext";

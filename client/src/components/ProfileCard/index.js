@@ -1,11 +1,27 @@
-import React from "react";
-// import API from "../../utils/API";
-// import { useStoreContext } from "../../utils/GlobalState";
-// import { SET_CURRENT_PROFILE, ADD_MATCH, REMOVE_MATCH } from "../../utils/actions";
-// import { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
+import axios from "axios";
+import { AuthContext } from "../../AuthContext";
 
-const ProfileCard = (props) => { // can pass in image props from cloudinary
 
+function ProfileCard() { // can pass in image props from cloudinary
+  const { currentUser } = useContext(AuthContext);
+
+  useEffect(() => {
+    console.log(`currentUser: ${currentUser.uid}`);
+   
+  axios.get(`/api/profiles/${currentUser.uid}`)
+  .then((res) => {
+    console.log(res.data[0].puppyName);
+    console.log(res.data[0].puppyParent);
+    console.log(res.data[0].bio);
+    console.log(res.data[0].age);
+    console.log(res.data[0].breed);
+    
+    
+  })
+  .catch((err) => console.log(err));
+  }, [])
+  
     return (
      
       <div className="max-w-sm rounded overflow-hidden shadow-lg">
@@ -13,6 +29,7 @@ const ProfileCard = (props) => { // can pass in image props from cloudinary
         <div className="px-6 py-4">
           <div className="font-bold text-orangedark text-xl mb-2">
             Puppy Tati with human Sandra
+           
           </div>
           <p className="text-black text-base">
             Bio: <span></span>😜
@@ -26,8 +43,8 @@ const ProfileCard = (props) => { // can pass in image props from cloudinary
         </div>
       
     );
-  
-};
+              
+  };
 
 
 export default ProfileCard;
