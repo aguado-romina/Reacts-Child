@@ -42,17 +42,20 @@ function ProfileCard() {
             <div className="px-6 py-4">
               <div className="font-bold text-orangedark text-xl mb-2">
               <div className="font-bold text-orangedark text-xl mb-2">
-            Puppy { data[0].puppyName } with human { data[0].puppyParent }
+            Puppy { console.log(data[0]) } with human 
+            {/* { data[0].puppyParent } */}
            
           </div>
               </div>
               <p className="text-black text-base">
-                Bio: { data[0].bio } <span></span>😜
+                Bio: 
+                {/* { data[0].bio } <span></span>😜 */}
               </p>
             </div>
             <div className="px-6 py-4">
               <span className="inline-block bg-yellowlight rounded-full px-3 py-1 text-sm font-semibold text-white mr-2">
-                #Age: { data[0].age }
+                #Age: 
+                {/* { data[0].age } */}
               </span>
               {/* <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#Writter</span>
                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mt-2 ml-20">#Public Speaker</span> */}
