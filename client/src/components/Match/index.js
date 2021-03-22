@@ -80,14 +80,11 @@ class Discover extends Component {
             age={age}
             handleBtnClick={this.handleBtnClick}
           />
-<<<<<<< HEAD
-=======
 
           
           <h1 className="text-center">
             Made friends with {this.state.matchCount} pups so far!
-
->>>>>>> 90f2a8ff69b0ba3986c3b06977b73a7750573dae
+        </h1>
           <h1 className="text-center max-w-md w-full space-y-8 sm:px-3 px-4 py-9">
            
            
@@ -95,10 +92,6 @@ class Discover extends Component {
             Made friends with 
              <span className="text-darkblue text-md font-semibold"> {this.state.matchCount}</span> pups so far!
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 90f2a8ff69b0ba3986c3b06977b73a7750573dae
           </h1>
           {/* <Alert style={{ opacity: this.state.match ? 1 : 0 }} type="success">
             Yay! That Pup Liked You Too!!!
