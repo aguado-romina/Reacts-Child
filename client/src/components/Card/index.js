@@ -6,36 +6,39 @@ import "./style.css";
 
 function Card(props) {
   return (
-    <div className="wrapper bg-gray-100 antialiased text-gray-400">
+    <div className="wrapper bg-white antialiased text-black">
       <div>
         <img
           src= {props.image}
           alt={props.puppy}
           className="w-full object-cover object-center rounded-lg shadow-md"
         />
-        <div className="relative px-4 -mt-16  ">
-          <div className="bg-white p-6 rounded-lg shadow-lg">
+        <div className="relative px-5 -mt-0  ">
+          <div className="bg-white p-10 rounded-lg">
             <div className="flex items-baseline">
-              <span className="bg-teal-200 text-teal-800 text-xs px-2 inline-block rounded-full  uppercase font-semibold tracking-wide">
+              <span className="text-base bg-teal-200 text-orangedark text-xs px-2 inline-block rounded-full  uppercase font-semibold tracking-wide">
                 Woof
               </span>
-              <div className="ml-2 text-gray-600 uppercase text-xs font-semibold tracking-wider">
+              <div className="ml-2 text-lightblue uppercase text-xs font-semibold tracking-wider">
                 {/* 2 baths &bull; 3 rooms */}
                 
               </div>
             </div>
             <h4 className="mt-1 text-xl font-semibold uppercase leading-tight truncate">
-             Hi It's {props.human} and {props.puppy} !
+             Hi It's <span className="text-yellowlight text-md font-semibold">{props.human} </span>
+             and
+             <span className="text-lightblue text-md font-semibold"> {props.puppy}
+             </span> !
             </h4>
             <div className="mt-1">
               Bio: {props.bio}
-              <span className="text-gray-600 text-sm"> </span>
+              <span className="text-darkblue text-sm"> </span>
             </div>
             <div className="mt-4">
-              <span className="text-teal-600 text-md font-semibold">
-                Age: {props.age}
+              Age: <span className="text-orangedark text-md font-semibold">
+                 {props.age}
               </span>
-              {/* <span className="text-sm text-gray-600">(based on 234 ratings)</span> */}
+              {/* <span className="text-sm text-darkblue">(based on 234 ratings)</span> */}
             </div>
           </div>
           <CardBtn
@@ -46,7 +49,7 @@ function Card(props) {
         onClick={props.handleBtnClick}
         data-value="pick"
       />
- <span onClick={() => props.removePuppy(props.id)} className="remove">
+ <span onClick={() => props.removePuppy(props.id)} className="remove h-1 px-2 text-darkblue transition-colors duration-150 border border-bluelight rounded-lg focus:shadow-outline hover:bg-bluelught hover:text-bluedark">
         𝘅
       </span>
         </div>
@@ -55,3 +58,4 @@ function Card(props) {
   );
 }
 export default Card;
+

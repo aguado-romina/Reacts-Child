@@ -9,11 +9,14 @@ module.exports = {
         "yellowlight":  '#E9C46A',
         "orangelight": '#F4A261',
         "orangedark":  '#E76F51',
+        
       },
-
-      
     },
-  },
+    fontFamily:{
+      fonts: ['Roboto'],
+    }
+    },
+ 
   variants: {
     extend: {},
   },
