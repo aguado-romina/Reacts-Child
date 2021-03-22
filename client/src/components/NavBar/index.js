@@ -82,10 +82,15 @@ const NavBar = ({ history }) => {
             <div className="flex-shrink-0 flex items-center"></div>
             <div className="hidden sm:block sm:ml-10">
               <div className="flex space-x-2">
+<<<<<<< HEAD
+                <div >
+                <img src="https://github.com/aguado-romina/Reacts-Child/blob/roxie/client/src/images/welcome.png?raw=true"  width="160" alt="logo" className="" />
+=======
 
                 <div >
                 <img src="https://github.com/aguado-romina/Reacts-Child/blob/roxie/client/src/images/welcome.png?raw=true"  width="160" alt="logo" className="" />
 
+>>>>>>> 90f2a8ff69b0ba3986c3b06977b73a7750573dae
                 </div>
 
                 <Link

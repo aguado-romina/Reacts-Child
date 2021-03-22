@@ -1,10 +1,10 @@
 import React from "react";
-import CardBtn from "../CardBtn";
+
 
 
 import "./style.css";
 
-function Card(props) {
+function MatchesCard(props) {
   return (
     <div className="wrapper bg-white antialiased text-black">
       <div>
@@ -41,14 +41,7 @@ function Card(props) {
               {/* <span className="text-sm text-darkblue">(based on 234 ratings)</span> */}
             </div>
           </div>
-          <CardBtn
-        onClick={props.handleBtnClick}
-        data-value="pass" 
-      />
-      <CardBtn
-        onClick={props.handleBtnClick}
-        data-value="pick"
-      />
+      
  <span onClick={() => props.removePuppy(props.id)} className="remove h-1 px-2 text-darkblue transition-colors duration-150 border border-bluelight rounded-lg focus:shadow-outline hover:bg-bluelught hover:text-bluedark">
         𝘅
       </span>
@@ -57,5 +50,5 @@ function Card(props) {
     </div>
   );
 }
-export default Card;
+export default MatchesCard;
 
