@@ -59,9 +59,18 @@ class Discover extends Component {
     render() {
       const { id, human, puppy, bio, image, age} = this.state
       return (
-        <div>
-          <h1 className="text-center">Make New Friends</h1>
+        
+        <div className="object-contain lg:container  bg-white px-2 mx-auto rounded-md   flex justify-center ">
+      
+        <div className=" max-w-lg w-full sm:px-auto px-4 py-10">
           
+          <h1 className="text-center">Make New Friends</h1>
+          <h3 className="text-center">
+            Thumbs up on any pups you'd like to meet!
+          </h3>
+          <div className=" max-w-md w-full sm:px-auto px-4 py-10">
+       
+          <div className=" max-w-md w-full sm:px-auto px-4 py-10">
           <Card
             id={id}
             human={human}
@@ -71,12 +80,22 @@ class Discover extends Component {
             age={age}
             handleBtnClick={this.handleBtnClick}
           />
-          <h1 className="text-center">
-            Made friends with {this.state.matchCount} pups so far!
+          <h1 className="text-center max-w-md w-full space-y-8 sm:px-3 px-4 py-9">
+           
+           
+           
+            Made friends with 
+             <span className="text-darkblue text-md font-semibold"> {this.state.matchCount}</span> pups so far!
+            
+
+
           </h1>
           {/* <Alert style={{ opacity: this.state.match ? 1 : 0 }} type="success">
             Yay! That Pup Liked You Too!!!
           </Alert> */}
+        </div>
+        </div>
+        </div>
         </div>
       );
     }

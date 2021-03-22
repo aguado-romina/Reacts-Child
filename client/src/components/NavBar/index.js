@@ -12,7 +12,7 @@ const NavBar = ({ history }) => {
   return (
 
     
-    <nav className="bg-white h-auto">
+    <nav className="font-fonts bg-white h-auto">
       <div className="max-w-7xl h-0 mx-auto px-2 sm:px-2 sm:px-3 p-4">
         <div className="relative flex items-center justify-left h-4">
           <div className="absolute inset-y-0 left-0 flex items-center">
@@ -63,7 +63,7 @@ const NavBar = ({ history }) => {
                   className={window.location.pathname === "/matches"}
                 >
                   <div className="text-black hover:bg-darkblue hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                    You Matches
+                    Your Matches
                   </div>
                 </Link>
                 <Link
@@ -78,11 +78,12 @@ const NavBar = ({ history }) => {
             </div>
           </div>
           {/* DESKTOP VIEW */}
-          <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+          <div className=" flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex-shrink-0 flex items-center"></div>
             <div className="hidden sm:block sm:ml-10">
               <div className="flex space-x-2">
-                <div className="bg-lightblue text-white px-2 py-2 rounded-md text-sm font-medium">
+                <div className="bg-lightblue text-white px-2 py-2 rounded-md text-sm font-medium" img src="http://thinkingstiff.com/images/matt.jpg">
+                 
                   Welcome
                 </div>
 
