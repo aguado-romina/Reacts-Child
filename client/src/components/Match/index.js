@@ -95,4 +95,3 @@ class Discover extends Component {
   }
   
   export default Discover;
-  

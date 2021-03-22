@@ -2,9 +2,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
 function Welcome() {
   return (
+
 
    
     <div className="object-contain md:container  bg-white px-2 mx-auto rounded-md   ">
@@ -36,18 +36,17 @@ function Welcome() {
               type="submit"
               className="group relative font-fonts flex justify-center py-2 px-3 border border-transparent text-sm text-white font-medium rounded-md bg-lightblue hover:bg-darkblue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightblue ">
                       
+
             <Link
-
-               to="/signup"
+              to="/signup"
               className={
-                window.location.pathname === "/" || window.location.pathname === "/signup"}
-
-
-            >Sign Up</Link>
-            </button>
-         
-
-      
+                window.location.pathname === "/" ||
+                window.location.pathname === "/signup"
+              }
+            >
+              Sign Up
+            </Link>
+          </button>
           <Link
             to="/login"
             className={
@@ -55,6 +54,7 @@ function Welcome() {
               window.location.pathname === "/login"
             }
           >
+
             
           <button
             type="submit"
@@ -67,8 +67,9 @@ function Welcome() {
 
     
        </div>
+
       </main>
-  </div>
+    </div>
   );
 }
 export default Welcome;
