@@ -25,7 +25,7 @@ function Welcome() {
 
            
           <div className="flex justify-center">
-          <p className="mt-3 text-base text-black sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+          <p className="font-fonts mt-3 text-base text-black sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
             A letter written from a dog to their human.
           </p>
           </div>
@@ -34,7 +34,7 @@ function Welcome() {
 
             <button
               type="submit"
-              className="group relative flex justify-center py-2 px-3 border border-transparent text-sm text-white font-medium rounded-md bg-lightblue hover:bg-darkblue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightblue ">
+              className="group relative font-fonts flex justify-center py-2 px-3 border border-transparent text-sm text-white font-medium rounded-md bg-lightblue hover:bg-darkblue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightblue ">
                       
 
             <Link
@@ -58,7 +58,7 @@ function Welcome() {
             
           <button
             type="submit"
-            className="group relative flex justify-center py-2 px-4 border border-transparent text-sm text-white font-medium rounded-md bg-lightblue hover:bg-darkblue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightblue "
+            className="group relative font-fonts flex justify-center py-2 px-4 border border-transparent text-sm text-white font-medium rounded-md bg-lightblue hover:bg-darkblue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightblue "
           >
             Login
           </button>

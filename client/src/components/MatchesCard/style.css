@@ -1,0 +1,13 @@
+.wrapper{
+    display:grid;
+    /* height:50; */
+    place-items:center
+  }
+
+  .div, .hide-scroll-bar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .div, .hide-scroll-bar::-webkit-scrollbar {
+    display: none;
+  }

@@ -30,12 +30,12 @@ const Login = ({ history }) => {
   }
 
   return (
-    <div className="max-w-sm container bg-white px-10 mx-auto rounded-lg flex justify-center sm:px-4  md:mt-10">
+    <div className="font-fonts max-w-sm container bg-white px-10 mx-auto rounded-lg flex justify-center sm:px-4  md:mt-10">
       
     
-    <div className=" max-w-md w-full space-y-1 sm:px-1 px-1 py-8">
+    <div className=" max-w-md w-full space-y-1 sm:px-1 px-1 py-5">
         <div>
-          <h2 className="flex justify-center mt-2 text-3xl font-extrabold text-black">
+          <h2 className="font-fonts flex justify-center mt-2 text-3xl font-extrabold text-black">
             Login to your account
           </h2>
           <div className="py-1 mt-2 text-center text-sm text-black">or</div>
