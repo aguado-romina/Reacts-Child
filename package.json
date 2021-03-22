@@ -2,7 +2,7 @@
   "name": "reacts-child",
   "version": "1.0.0",
   "private": true,
-  "proxy": "http://localhost:3001/",
+  "proxy": "http://localhost:3001",
   "description": "",
   "main": "server.js",
   "scripts": {
@@ -54,6 +54,8 @@
     "set-blocking": "^2.0.0"
   },
   "devDependencies": {
+    "@iconify-icons/fa": "^1.1.0",
+    "@iconify/react": "^1.1.4",
     "concurrently": "^6.0.0",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.22.0",

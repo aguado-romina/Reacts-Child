@@ -1,5 +1,7 @@
 import React from "react";
 import CardBtn from "../CardBtn";
+import { Icon, InlineIcon } from '@iconify/react';
+import pawIcon from '@iconify-icons/fa/paw';
 
 
 import "./style.css";
@@ -45,7 +47,9 @@ function Card(props) {
       <CardBtn
         onClick={props.handleBtnClick}
         data-value="pick"
+        
       />
+      
  <span onClick={() => props.removePuppy(props.id)} className="remove">
         𝘅
       </span>
