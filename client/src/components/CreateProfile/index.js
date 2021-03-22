@@ -4,7 +4,7 @@ import { ADD_PROFILE, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
 import { AuthContext } from "../../AuthContext";
 import { Link } from "react-router-dom";
-import { Image } from "cloudinary-react";
+// import { Image } from "cloudinary-react";
 import Allcompailed from "../UploadImages/Allcompailed";
 
 function CreateProfile() {
