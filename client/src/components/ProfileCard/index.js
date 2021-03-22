@@ -12,11 +12,6 @@ function ProfileCard() {
     axios.get
       (`/api/profiles/${currentUser.uid}`)
       .then((res) => {
-        // console.log(res.data[0].puppyName);
-        // console.log(res.data[0].puppyParent);
-        // console.log(res.data[0].bio);
-        // console.log(res.data[0].age);
-        // console.log(res.data[0].breed);
         setData(res.data)
       })
       .catch((err) => console.log(err));
@@ -26,12 +21,6 @@ function ProfileCard() {
       <div>Loading...</div>
     )
   } else {
-    // return (
-    //   <div className="max-w-sm rounded overflow-hidden shadow-lg">
-    //     {/* We have access to the `data` object here */}
-    //     { console.log(data[0]) }
-    //   </div>
-    // );
     return (
           <div className="max-w-sm rounded overflow-hidden shadow-lg">
             <img
@@ -42,19 +31,21 @@ function ProfileCard() {
             <div className="px-6 py-4">
               <div className="font-bold text-orangedark text-xl mb-2">
               <div className="font-bold text-orangedark text-xl mb-2">
-            Puppy { data[0].puppyName} with human 
+            Puppy {" "}
+            { data[0].puppyName} {" "}
+            with human {" "}
             { data[0].puppyParent }
            
           </div>
               </div>
               <p className="text-black text-base">
-                Bio: 
+                Bio: {" "}
                 { data[0].bio } <span></span>😜
               </p>
             </div>
             <div className="px-6 py-4">
               <span className="inline-block bg-yellowlight rounded-full px-3 py-1 text-sm font-semibold text-white mr-2">
-                #Age: 
+                #Age: {" "}
                 { data[0].age }
               </span>
               {/* <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#Writter</span>
