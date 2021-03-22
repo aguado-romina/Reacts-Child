@@ -40,7 +40,7 @@ function Card(props) {
           </div>
           <CardBtn
         onClick={props.handleBtnClick}
-        data-value="pass"
+        data-value="pass" 
       />
       <CardBtn
         onClick={props.handleBtnClick}
