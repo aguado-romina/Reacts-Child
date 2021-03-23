@@ -26,7 +26,7 @@ module.exports = {
       });
   },
   remove: function (req, res) {
-    db.Puppy .findById({ _id: ObjectId(req.params.id) })
+    db.Puppy .deleteOne({ currentUser: req.params.id })
       .then((dbModel) => dbModel.remove())
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
