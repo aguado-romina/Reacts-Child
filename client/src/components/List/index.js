@@ -16,10 +16,12 @@ class Puppy extends Component {
   render() {
     return (
       <>
-      <div>
-        
-      </div>
-        <div className="grid lg:grid-cols-3 sm:grid-cols-1 py-8">
+    
+    <div class="flex flex-wrap overflow-hidden">
+
+<div class="w-full overflow-hidden">
+     
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 py-4 px-5">
         {this.state.puppies.map((puppy) => (
           
           <MatchesCard
@@ -33,6 +35,9 @@ class Puppy extends Component {
           />
         ))}
         </div>
+        </div>
+        </div>
+        
       </>
     );
   }
