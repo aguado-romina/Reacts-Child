@@ -6,9 +6,11 @@ import "./style.css";
 
 function MatchesCard(props) {
   return (
-    <div className="wrapper bg-white antialiased text-black">
-      <div>
-        <img
+    <div>
+    <div className="wrapper bg-white antialiased text-black object-center">
+    
+        <div>
+        <img className="cardImage img-fluid"
           src= {props.image}
           alt={props.puppy}
           className="w-full object-cover object-center rounded-lg shadow-md"
@@ -49,6 +51,7 @@ function MatchesCard(props) {
       </span>
         </div>
       </div>
+    </div>
     </div>
   );
 }

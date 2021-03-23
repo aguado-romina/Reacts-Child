@@ -1,6 +1,6 @@
 .wrapper{
-    display:grid;
-    /* height:50; */
+    display:flex;
+    height:50;
     place-items:center
   }
 
@@ -10,4 +10,9 @@
   }
   .div, .hide-scroll-bar::-webkit-scrollbar {
     display: none;
+  }
+  .cardImage {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
   }

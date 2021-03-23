@@ -1,98 +1,97 @@
 [
-    {
-      "id": 1,
-      "human": "Jake",
-      "puppy": "Squidward",
-      "image": "https://images.unsplash.com/photo-1472698938026-79bed881e5b7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80",
-      "bio": "I like to chase squirrels",
-      "age": "5"
-    },
-    {
-      "id": 2,
-      "human": "Jackie",
-      "puppy": "Mr. Magoo",
-      "image": "https://images.unsplash.com/photo-1503774620960-c9c62fe1c6ee?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80",
-      "bio": "I like long walks on the beach",
-      "age": "3"
-    },
-    {
-      "id": 3,
-      "human": "Tommie",
-      "puppy": "Fiona Belle",
-      "image": "https://images.unsplash.com/photo-1506499422601-ecc792cf898e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80",
-      "bio": "I love to playing tug-o-war",
-      "age": "A lady never tells"
-    },
-    {
-      "id": 4,
-      "human": "Samuel",
-      "puppy": "Samuella",
-      "image": "https://images.unsplash.com/photo-1512546148165-e50d714a565a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80",
-      "bio": "Sniff my but and you will know",
-      "age": "7"
-    },
-    {
-      "id": 5,
-      "human": "Patricia",
-      "puppy": "Spongey",
-      "image": "https://images.unsplash.com/photo-1504430225224-21a649ac91bc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80",
-      "bio": "let's run around without a leash",
-      "age": "13"
-    },
-    {
-      "id": 6,
-      "human": "Charlie",
-      "puppy": "Bobbette",
-      "image": "https://images.unsplash.com/photo-1447684808650-354ae64db5b8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80",
-      "bio": "can we pee on every tree in the park?",
-      "age": "8"
-    },
-    {
-      "id": 7,
-      "human": "Ace",
-      "puppy": "Icee",
-      "image": "https://images.unsplash.com/photo-1552053831-71594a27632d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80",
-      "bio": "The cold never bothered me anyway",
-      "age": "Ice Age"
-    },
-    {
-      "id": 8,
-      "human": "Potter",
-      "puppy": "Hedwig",
-      "image": "https://images.unsplash.com/photo-1515532389667-6373451c5053?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=350&q=80",
-      "bio": "Accio playmate",
-      "age": "12"
-    },
-    {
-      "id": 9,
-      "human": "Clark",
-      "puppy": "Krypton",
-      "image": "https://images.unsplash.com/photo-1588943211346-0908a1fb0b01?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80",
-      "bio": "Tailchasing is my middlename",
-      "age": "9"
-    },
-    {
-      "id": 10,
-      "puppy": "SpongeBob",
-      "image": "https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80",
-      "bio": "I like to chase squirrels",
-      "age": "A Pineapple Under the Sea"
-    },
-    {
-      "id": 11,
-      "human": "Batt",
-      "puppy": "Mobile",
-      "image": "https://images.unsplash.com/photo-1574850715183-730d97e1d99c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80",
-      "bio": "My bark is harmless. It's chasetime",
-      "age": "11"
-    },
-    {
-      "id": 12,
-      "human": "Neo",
-      "puppy": "Agent Smith",
-      "image": "https://images.unsplash.com/photo-1581980110707-7a5814503a63?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80",
-      "bio": "We really can be friends. Promise!",
-      "age": "12"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "human": "Jake",
+    "puppy": "Squidward",
+    "image": "https://images.unsplash.com/photo-1472698938026-79bed881e5b7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80&width=300&height=300",
+    "bio": "I like to chase squirrels",
+    "age": "5"
+  },
+  {
+    "id": 2,
+    "human": "Jackie",
+    "puppy": "Mr. Magoo",
+    "image": "https://images.unsplash.com/photo-1503774620960-c9c62fe1c6ee?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80&width=300&height=300",
+    "bio": "I like long walks on the beach",
+    "age": "3"
+  },
+  {
+    "id": 3,
+    "human": "Tommie",
+    "puppy": "Fiona Belle",
+    "image": "https://images.unsplash.com/photo-1506499422601-ecc792cf898e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80&width=300&height=300",
+    "bio": "I love to playing tug-o-war",
+    "age": "A lady never tells"
+  },
+  {
+    "id": 4,
+    "human": "Samuel",
+    "puppy": "Samuella",
+    "image": "https://images.unsplash.com/photo-1512546148165-e50d714a565a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80&width=300&height=300",
+    "bio": "Sniff my but and you will know",
+    "age": "7"
+  },
+  {
+    "id": 5,
+    "human": "Patricia",
+    "puppy": "Spongey",
+    "image": "https://images.unsplash.com/photo-1504430225224-21a649ac91bc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80&width=300&height=300",
+    "bio": "let's run around without a leash",
+    "age": "13"
+  },
+  {
+    "id": 6,
+    "human": "Charlie",
+    "puppy": "Bobbette",
+    "image": "https://images.unsplash.com/photo-1447684808650-354ae64db5b8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80&width=300&height=300",
+    "bio": "can we pee on every tree in the park?",
+    "age": "8"
+  },
+  {
+    "id": 7,
+    "human": "Ace",
+    "puppy": "Icee",
+    "image": "https://images.unsplash.com/photo-1477884143921-51d0a574ee09?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80&width=300&height=300",
+    "bio": "The cold never bothered me anyway",
+    "age": "Ice Age"
+  },
+  {
+    "id": 8,
+    "human": "Potter",
+    "puppy": "Hedwig",
+    "image": "https://images.unsplash.com/photo-1515532389667-6373451c5053?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=350&q=80&width=300&height=300",
+    "bio": "Accio playmate",
+    "age": "12"
+  },
+  {
+    "id": 9,
+    "human": "Clark",
+    "puppy": "Krypton",
+    "image": "https://images.unsplash.com/photo-1588943211346-0908a1fb0b01?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80&width=300&height=300",
+    "bio": "Tailchasing is my middlename",
+    "age": "9"
+  },
+  {
+    "id": 10,
+    "puppy": "SpongeBob",
+    "image": "https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80&width=300&height=300",
+    "bio": "I like to chase squirrels",
+    "age": "A Pineapple Under the Sea"
+  },
+  {
+    "id": 11,
+    "human": "Batt",
+    "puppy": "Mobile",
+    "image": "https://images.unsplash.com/photo-1574850715183-730d97e1d99c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80&width=300&height=300",
+    "bio": "My bark is harmless. It's chasetime",
+    "age": "11"
+  },
+  {
+    "id": 12,
+    "human": "Neo",
+    "puppy": "Agent Smith",
+    "image": "https://images.unsplash.com/photo-1581980110707-7a5814503a63?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80&width=300&height=300",
+    "bio": "We really can be friends. Promise!",
+    "age": "12"
+  }
+]
