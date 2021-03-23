@@ -6,18 +6,20 @@ import "./style.css";
 
 function MatchesCard(props) {
   return (
-    <div className="wrapper bg-white antialiased text-black object-center">
-      <div>
+    <div>
+    <div className="bg-white antialiased text-black object-center">
+    
         <div>
         <img className="cardImage img-fluid"
           src= {props.image}
           alt={props.puppy}
           className="w-full object-cover object-center rounded-lg shadow-md"
         />
-        </div>
-        <div className="relative px-5 -mt-0  ">
-          <div className="bg-white p-10 rounded-lg">
+        <div className="relative px-10 -mt-0  ">
+          <div className="sm-bg-white p-2 px-3 rounded-lg">
             <div className="flex items-baseline">
+
+              
               <span className="text-base bg-teal-200 text-orangedark text-xs px-2 inline-block rounded-full  uppercase font-semibold tracking-wide">
                 Woof
               </span>
@@ -49,6 +51,7 @@ function MatchesCard(props) {
       </span>
         </div>
       </div>
+    </div>
     </div>
   );
 }
