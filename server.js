@@ -10,9 +10,9 @@ require("dotenv").config();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Serve up static assets (usually on heroku)
-app.use(express.static(path.join(__dirname, "./client/public")));
+app.use(express.static(path.join(__dirname, "./client/build")));
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/public"));
+  res.sendFile(path.join(__dirname, "./client/build"));
 });
 
 // Define API routes here
