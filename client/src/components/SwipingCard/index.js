@@ -6,16 +6,16 @@ import "./style.css";
 
 function Card(props) {
   return (
-    <div className="wrapper bg-white antialiased text-black">
+    <div className="wrapper bg-white antialiased text-black object-center">
       <div>
         <img
           src= {props.image}
           alt={props.puppy}
-          className="w-full object-cover object-center rounded-lg shadow-md"
+          className="w-full object-cover object-center rounded-lg shadow-md object-centers"
         />
         <div className="relative px-5 -mt-0  ">
-          <div className="bg-white p-10 rounded-lg">
-            <div className="flex items-baseline">
+          <div className="object-center bg-white p-10 rounded-lg">
+            <div className="content-center flex items-baseline">
               <span className="text-base bg-teal-200 text-orangedark text-xs px-2 inline-block rounded-full  uppercase font-semibold tracking-wide">
                 Woof
               </span>

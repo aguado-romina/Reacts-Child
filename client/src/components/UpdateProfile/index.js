@@ -151,7 +151,7 @@ function UpdateProfile() {
                       </div>
                     </div>
                   </div>
-                  <div className="px-4 py-3 bg-white text-right sm:px-6">
+                  <div className="px-4 py-3 bg-white text-right sm:px-6 object-center">
                     <button
                       type="submit"
                       className="group relative font-fonts flex justify-center py-2 px-4 border border-transparent text-sm text-white font-medium rounded-md bg-lightblue hover:bg-darkblue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightblue "

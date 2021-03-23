@@ -82,9 +82,7 @@ class Discover extends Component {
           />
 
           
-          <h1 className="text-center">
-            Made friends with {this.state.matchCount} pups so far!
-        </h1>
+        
           <h1 className="text-center max-w-md w-full space-y-8 sm:px-3 px-4 py-9">
            
            

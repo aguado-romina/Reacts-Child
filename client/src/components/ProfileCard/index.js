@@ -15,12 +15,12 @@ const ProfileCard = (props) => { // can pass in image props from cloudinary
           
         </div>
       </div>
-      <h1 className="font-fonts text-darkblue text-lg font-medium leading-8 ">
+      <h1 className="font-fonts text-darkblue text-lg font-medium leading-8  ">
                 Profile
               </h1>
-        <img className="w-full" src="https://images.unsplash.com/photo-1472698938026-79bed881e5b7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80" width="600" with ="600" alt="Display" />
+        <img className="w-full  rounded-lg " src="https://images.unsplash.com/photo-1472698938026-79bed881e5b7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=350&q=80" width="600" with ="600" alt="Display" />
         <div className="px-6 py-4">
-          <div className="flex justify-center font-bold text-orangedark text-xl mb-2">
+          <div className="flex justify-center font-bold text-orangedark text-xl mb-2 ">
             Puppy Tati with human Sandra
           </div>
           <p className="text-black text-base">
