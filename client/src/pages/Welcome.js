@@ -26,7 +26,7 @@ function Welcome() {
            
           <div className="flex justify-center">
           <p className="font-fonts mt-3 text-base text-black sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-            A letter written from a dog to their human.
+            Making Matches Pawsible 🐶
           </p>
           </div>
         
