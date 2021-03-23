@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import { AuthContext } from "../../AuthContext";
 
 function ProfileCard() {
@@ -25,7 +25,7 @@ function ProfileCard() {
   }, [data]);
   if (data === undefined){
     return (
-      <Redirect to="/createprofile"></Redirect>
+      <Link to="/createprofile"></Link>
     )
   } 
   else {

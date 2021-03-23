@@ -10,7 +10,7 @@ import { StoreProvider } from "./utils/GlobalState";
 import Profile from "./pages/Profile";
 import { AuthProvider } from "./AuthContext";
 import Matches from "./pages/Matches";
-// import PrivateRoute from "./PrivateRoute";
+import PrivateRoute from "./PrivateRoute";
 
 function App() {
   return (
@@ -26,10 +26,10 @@ function App() {
             <Route exact path="/" component={Welcome} />
             <Route exact path="/login" component={LoginPage} />
             <Route exact path="/signup" component={Signup} />
-            <Route exact path="/createprofile" component={CreateProfileForm} />
-            <Route exact path="/profile" component={Profile} />
-            <Route exact path="/swipe" component={UserSwipe} />
-            <Route exact path="/matches" component={Matches} />
+            <PrivateRoute exact path="/createprofile" component={CreateProfileForm} />
+            <PrivateRoute exact path="/profile" component={Profile} />
+            <PrivateRoute exact path="/swipe" component={UserSwipe} />
+            <PrivateRoute exact path="/matches" component={Matches} />
             <Route component={NoMatch} />
           </Switch>
         </StoreProvider>
