@@ -5,7 +5,7 @@ import "./style.css";
 
 function Card(props) {
   return (
-    <div className="wrapper bg-white antialiased text-black object-center">
+    <div className="bg-white antialiased text-black object-center">
       <div>
         <img
           src= {props.image}
@@ -13,9 +13,9 @@ function Card(props) {
           className="w-full object-cover object-center rounded-lg shadow-md object-centers"
         />
         <div className="relative px-5 -mt-0  ">
-          <div className="object-center bg-white p-10 rounded-lg">
+          <div className="object-center bg-white rounded-lg">
             <div className="content-center flex items-baseline">
-              <span className="text-base bg-teal-200 text-orangedark text-xs px-2 inline-block rounded-full  uppercase font-semibold tracking-wide">
+              <span className="py-4 text-base bg-teal-200 text-orangedark text-xs px-2 inline-block rounded-full  uppercase font-semibold tracking-wide">
                 Woof
               </span>
               <div className="ml-2 text-lightblue uppercase text-xs font-semibold tracking-wider">
@@ -33,7 +33,7 @@ function Card(props) {
               Bio: {props.bio}
               <span className="text-darkblue text-sm"> </span>
             </div>
-            <div className="mt-4">
+            <div className="mt-3">
               Age: <span className="text-orangedark text-md font-semibold">
                  {props.age}
               </span>
@@ -44,11 +44,12 @@ function Card(props) {
         onClick={props.handleBtnClick}
         data-value="pass" 
       />
+       <div className="mt-12 py-4">
       <CardBtn
         onClick={props.handleBtnClick}
         data-value="pick"
       />
- 
+ </div>
         </div>
       </div>
     </div>

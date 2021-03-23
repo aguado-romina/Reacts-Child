@@ -7,7 +7,7 @@ import "./style.css";
 function MatchesCard(props) {
   return (
     <div>
-    <div className="wrapper bg-white antialiased text-black object-center">
+    <div className="bg-white antialiased text-black object-center">
     
         <div>
         <img className="cardImage img-fluid"

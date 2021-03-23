@@ -70,7 +70,6 @@ class Discover extends Component {
           </h3>
           <div className=" max-w-md w-full sm:px-auto px-4 py-10">
        
-          <div className=" max-w-md w-full sm:px-auto px-4 py-10">
           <Card
             id={id}
             human={human}
@@ -97,7 +96,7 @@ class Discover extends Component {
         </div>
         </div>
         </div>
-        </div>
+        
       );
     }
   }

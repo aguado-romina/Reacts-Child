@@ -43,7 +43,7 @@ const NavBar = ({ history }) => {
             </button>
             {/* MOBILE VIEW */}
             <div >
-                <img src="https://github.com/aguado-romina/Reacts-Child/blob/roxie/client/src/images/welcome.png?raw=true"  width="160" alt="logo" className="object-center" />
+                <img src="https://github.com/aguado-romina/Reacts-Child/blob/roxie/client/src/images/welcome.png?raw=true"  width="160" alt="logo" className=" lg:hidden md:hidden object-center" />
                 </div>
             <div className={`lg:flex ${isOpen ? "block" : "hidden"} `}>
               <div
