@@ -5,6 +5,8 @@ import API from "../../utils/API";
 import SignUpImg from "../UploadImages/SignUpImg/index";
 import Modal from "react-modal";
 import { AuthContext } from "../../AuthContext";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 function UpdateProfile() {
   const { currentUser } = useContext(AuthContext);
@@ -15,6 +17,7 @@ function UpdateProfile() {
   const bioRef = useRef();
   const [state, dispatch] = useStoreContext();
   const [modalIsOpen, setModalIsOpen] = useState(false);
+
   const handleSubmit = (e) => {
     setModalIsOpen(false);
     e.preventDefault();

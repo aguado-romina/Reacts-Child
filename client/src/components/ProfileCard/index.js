@@ -1,11 +1,18 @@
 import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
+import { Redirect } from "react-router-dom";
 import { AuthContext } from "../../AuthContext";
 
 function ProfileCard() {
   // can pass in image props from cloudinary
   const { currentUser } = useContext(AuthContext);
-  const [ data, setData ] = useState(undefined)
+  const [ data, setData ] = useState(undefined);
+  const handleDelete = () => {
+    axios.delete(`/api/profiles/${currentUser.uid}`)
+    .then((res) => {
+      console.log(res.data)
+    })
+  }
 
   useEffect(() => {
     // console.log(`currentUser: ${currentUser.uid}`);
@@ -18,9 +25,10 @@ function ProfileCard() {
   }, [data]);
   if (data === undefined){
     return (
-      <div>Loading...</div>
+      <Redirect to="/createprofile"></Redirect>
     )
-  } else {
+  } 
+  else {
     return (
           <div className="max-w-sm rounded overflow-hidden shadow-lg">
             <img
@@ -36,6 +44,7 @@ function ProfileCard() {
             with human {" "}
             { data[0].puppyParent }
            
+            
           </div>
               </div>
               <p className="text-black text-base">
@@ -48,8 +57,10 @@ function ProfileCard() {
                 #Age: {" "}
                 { data[0].age }
               </span>
-              {/* <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#Writter</span>
-                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mt-2 ml-20">#Public Speaker</span> */}
+              <button className="group relative flex justify-center py-2 px-4 border border-transparent text-sm text-white font-medium rounded-md bg-lightblue hover:bg-darkblue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightblue"
+              onClick={handleDelete}
+              >Delete Profile
+              </button>
             </div>
           </div>
         );
