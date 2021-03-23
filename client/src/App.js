@@ -10,6 +10,7 @@ import { StoreProvider } from "./utils/GlobalState";
 import Profile from "./pages/Profile";
 import { AuthProvider } from "./AuthContext";
 import Matches from "./pages/Matches";
+// import PrivateRoute from "./PrivateRoute";
 
 function App() {
   return (
