@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
 import { AuthContext } from "../../AuthContext";
+import { Link } from "react-router-dom";
+
 
 function ProfileCard() {
   // can pass in image props from cloudinary
@@ -25,7 +27,7 @@ function ProfileCard() {
   }, [data]);
   if (data === undefined){
     return (
-      <Redirect to="/createprofile"></Redirect>
+      <Link to="/createprofile"></Link>
     )
   } 
   else {
